@@ -1,6 +1,6 @@
 # DIFFERENCE BETWEEN RISCV COMPILERS AND OTHER COMPILER
 
-*Hello World Program*
+**Hello World**
 
 At first, we start to write a basic C program for printing Hello World.
 
@@ -18,7 +18,7 @@ We are using Godbolt [https://godbolt.org/] to show the assembly differences and
 The *HELLO WORLD* program can be differentiated using the mips gcc and riscv32-unknown-elf-gcc toolchain as shown in the below diagram.
 ![image](/week1/helloworld.png)
 
-*Counter*
+**Counter**
 
 The next program we are focusing on is on implementation of a 5-bit counter using the C program.
 ```
@@ -51,5 +51,10 @@ We can see the difference between the assembly instructions using the riscv64-un
 
 Now, let us modify the 4-bit counter to the 7-bit counter and see the difference.
 ![image2](/week1/7_bit_counter.png)
+
+**Matrix Multiplication**
+
+Another program that we are going to implement is matrix multiplication.
+
 
 
