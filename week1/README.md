@@ -15,5 +15,5 @@ We are using Godbolt [https://godbolt.org/] to show the assembly differences and
 
 **ASSEMBLY DIFFERENCES**
 The *HELLO WORLD* program can be differentiated using the mips gcc and riscv32-unknown-elf-gcc toolchain as shown in the below diagram.
-![image](week1/helloworld.png)
+![image](/week1/helloworld.png)
 
