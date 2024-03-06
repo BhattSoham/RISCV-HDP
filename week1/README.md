@@ -39,10 +39,17 @@ int count = 0x00000000;
 	{
 		display(count);
 		count++; //counter is incrementing
-        if(count==32){ //  if it's a 5-bit counter, then reset count value to 0
+        if(count==16){ //  if it's a 5-bit counter, then reset the count value to 0
             count=0; 
         }
 		delay(500000); // delay of 0.5 ms
 	}
 }
 ```
+We can see the difference between the assembly instructions using the riscv64-unknown-elf-gcc toolchain and the x86-64 gcc compilers.
+![image](/week1/4_bit_counter.png)
+
+Now, let us modify the 4-bit counter to the 7-bit counter and see the difference.
+![image2](/week1/7_bit_counter.png)
+
+
