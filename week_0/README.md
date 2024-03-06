@@ -52,6 +52,9 @@ location of the VDI file on your Ubuntu computer.
 environment.
 That's it! You have now successfully opened a VDI file in Ubuntu.
 
-**Note**
+**Note:**
+
 After installing the **ORACLE VM VIRTUALBOX MANAGER** on your machine, make sure to include these settings to get a better display.
+![image1] (../week_0/Settings1.png)
+
 
