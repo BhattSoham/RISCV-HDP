@@ -4,3 +4,11 @@
 
 At first, we start to write a basic C program for printing Hello World.
 
+```
+#include<stdio.h>
+int main() {
+  printf("Hello World! \n");
+  return 0;
+}
+```
+
