@@ -58,6 +58,6 @@ After installing the **ORACLE VM VIRTUALBOX MANAGER** on your machine, make sure
 ![image1](/week_0/Settings2.png)
 ![image1](/week_0/Settings3.png)
 
-After all the settings have been done, the **Oracle VM VirtualBox Manager" will look like this:
+After all the settings have been done, the **Oracle VM VirtualBox Manager** will look like this:
 ![image4](/week_0/Oracle_VM.png)
 
