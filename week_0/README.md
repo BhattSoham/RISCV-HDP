@@ -43,8 +43,7 @@ sudo apt install virtualBox
 4. Click on the "New" button to create a new virtual machine.
 5. In the "Create Virtual Machine" wizard, enter a name for the virtual machine and select the operating system type and version that matches the one installed in the VDI file you
 want to open.
-6. On the next screen, allocate memory and create a virtual hard disk. Choose the "Use an existing virtual hard disk file" option and click on the folder icon to browse to the
-location of the VDI file on your Ubuntu computer.
+6. On the next screen, allocate memory and create a virtual hard disk. Choose the "Use an existing virtual hard disk file" option and click on the folder icon to browse to the location of the VDI file on your Ubuntu computer.
 7. Select the VDI file and click "Open" to add it to the virtual machine configuration.
 8. Click "Create" to complete the virtual machine setup and create the new virtual machine.
 9. Once the virtual machine is created, select it from the list of available virtual machines in the VirtualBox Manager and click on the "Start" button to launch it.
@@ -55,6 +54,7 @@ That's it! You have now successfully opened a VDI file in Ubuntu.
 **Note:**
 
 After installing the **ORACLE VM VIRTUALBOX MANAGER** on your machine, make sure to include these settings to get a better display.
-![image1] (../week_0/Settings1.png)
-
+![image1](/week_0/Settings1.png)
+![image1](/week_0/Settings2.png)
+![image1](/week_0/Settings3.png)
 
