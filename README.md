@@ -1,5 +1,5 @@
 # RISCV-HARDWARE DESIGN PROGRAM (https://www.vlsisystemdesign.com/hdp_riscv/)
-Product Based RISC-V Skilling Program
+**Product-Based RISC-V Skilling Program**
 1. Exploring RISC-V's history, architecture, and Verilog simulations.
 2. Unlocking processor functionalities with hands-on exercises.
 3. Delving into Verilog code analysis and advanced instructions.
