@@ -51,3 +51,7 @@ location of the VDI file on your Ubuntu computer.
 10. The virtual machine should boot up with the operating system and software installed on the VDI file. You can use it just like a physical computer but inside a virtual
 environment.
 That's it! You have now successfully opened a VDI file in Ubuntu.
+
+**Note**
+After installing the **ORACLE VM VIRTUALBOX MANAGER** on your machine, make sure to include these settings to get a better display.
+
