@@ -1,4 +1,4 @@
-# Assignment 2 #
+# ASSIGNMENT 2 #
 
  ***1. Binary Arithmetic of (10-19)<sub>10</sub>*** 
 
