@@ -37,7 +37,7 @@ So,
 
 **-> Signed:** 
 
-For signed it is a simple addition. (00010100)<sub>2</sub> + (00011110)<sub>2</sub> = 00110010<sub>2</sub>
+For signed it is a simple addition. (00010100)<sub>2</sub> + (00011110)<sub>2</sub> = (00110010)<sub>2</sub>
 
 **-> 1's Complement Addition:** 
 
@@ -51,7 +51,7 @@ So, for performing 1's complement,
  a. Add binary numbers.
  b. Add carry to low-order bit.
 
- Therefore, 1's complement is (00010100)<sub>2</sub> + (00011110)<sub>2</sub> = 00110010<sub>2</sub> + 0(low-order carry) = 00110010<sub>2</sub>. 
+ Therefore, 1's complement is (00010100)<sub>2</sub> + (00011110)<sub>2</sub> = (00110010)<sub>2</sub> + 0(low-order carry) = (00110010)<sub>2</sub>. 
 
 **-> 2's Complement Addition:** 
 
@@ -60,7 +60,7 @@ For performing 2's complement,
 a. Add binary numbers.
 b. Ignore carry to low-order bit.
 
-Therefore, 2's complement is 00110010<sub>2</sub>.
+Therefore, 2's complement is (00110010)<sub>2</sub>.
 
 ***3. Binary Arithmetic of (36 - 12)<sub>10</sub>***
 
