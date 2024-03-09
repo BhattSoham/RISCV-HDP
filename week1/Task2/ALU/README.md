@@ -1,4 +1,6 @@
 # 4-bit ALU using C and Verilog #
+A 4-bit ALU (Arithmetic Logic Unit) is a digital circuit capable of performing arithmetic and logical operations on 4-bit binary numbers. It can execute operations such as addition, subtraction, AND, OR, and XOR, typically found in microprocessors and other digital systems.
+
 ### C Code ###
 The C code for implementing a 4-bit ALU has been given here: ![ALU_C_Code](/week1/Task2/ALU/alu.c)
 The code can be watched on Linux using the following command:
