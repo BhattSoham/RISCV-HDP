@@ -1,6 +1,6 @@
 # Addition using C and Verilog #
 
-We all know how to add. This is the directory for adding two numbers using C and Verilog.
+We all know how to add. This is the directory for adding two numbers using C and Verilog HDL.
 
 ### C Code ###
 Let's take a simple example of adding up two numbers. The C code for the addition is :
