@@ -1,79 +1,23 @@
 # 4-bit ALU using C and Verilog #
 ### C Code ###
-Let's take a simple example of adding up two numbers. The C code for the addition is :
+The C code for implementing a 4-bit ALU has been given here: ![ALU_C_Code](/week1/Task2/ALU/alu.c)
+The code can be watched on Linux using the following command:
 ```
-#include<stdio.h>
-int main () {
-   int num1, num2, result;   // Taking two numbers and a result as integers
-   printf("Enter two numbers:"); // Printing the numbers
-   scanf("%d %d", &num1, &num2); // Scanning them
-   result = num1 + num2; // The functionality of result
-   printf("The final result is: %d \n", result); // Printing the result
-   return 0;
-}
-```
-We can check the code on Linux too using ***cat*** command.
-```
-~ cat add.c
+~ cat alu.c
 ```
 So, for compiling the C code we have to use the following commands given below:
-![Compilation](/week1/Task2/Addition/c.png)
+![Compilation](/week1/Task2/ALU/c_compilation.png)
 
 ### Verilog Code ###
 
-Now, let us take the same example and run it on Verilog code. To run it on Verilog code, open the "Text Editor" on your Linux machine and demonstrate the behavioral module for a 1-bit adder.
-```
-module add( 
-input num1, num2, cin,  // input and output declaration
-output sum, cout);
+   Now, let us take the same example and run it on Verilog code. To run it on Verilog code, open the "Text Editor" on your Linux machine and demonstrate the behavioral module for a 4-bit ALU. The Verilog code can be found here: ![ALU_verilog](week1/Task2/ALU/ALU.v)
 
-reg [1:0] temp; // a variable 'temp' to check our sum and carry
+To check whether our behavioral is working perfectly, we have to write a testbench for it. The test bench can be found here: ![ALU_test_bench](/week1/Task2/ALU/ALU_tb.v)
 
-always@(*)
-   begin
-       temp = {1'b0, num1} + {1'b0, num2} + {1'b0, cin}; // Operation of temp
-   end
-
-assign sum = temp[0]; // To generate the output for sum
-assign cout = temp[1]; //To generate the output for carry out
-
-endmodule 
-```
-To check whether our behavioral is working perfectly, we have to write a testbench for it.
-```
-module add_tb();
-reg num1, num2, cin; // reg for the inputs and wire for the outputs
-wire sum, cout;
-
-add uut ( // Port mapping section with modulo and stimulus
-.num1(num1),
-.num2(num2),
-.cin(cin),
-.sum(sum),
-.cout(cout)
-);
-
-initial begin  
- $dumpfile("add.vcd");   // to generate the vcd file for our waveform
- $dumpvars(1, add_tb);
-
-num1 = 0; num2 = 0; cin = 0; #10; // Test cases, #10 is delaying for 10 ns 
-num1 = 0; num2 = 0; cin = 1; #10; // after generating the output.
-num1 = 0; num2 = 1; cin = 0; #10;
-num1 = 0; num2 = 1; cin = 1; #10;
-num1 = 1; num2 = 0; cin = 0; #10;
-num1 = 1; num2 = 0; cin = 1; #10;
-num1 = 0; num2 = 1; cin = 0; #10;
-num1 = 1; num2 = 1; cin = 1; #10;
-
-end
-
-endmodule
-```
 We can also check our codes on Linux by the following commands:
 ```
-~ cat add.v
-~ cat add_tb.v
+~ cat ALU.v
+~ cat ALU_tb.v
 ```
 The simulation has been done using Icarus Verilog (A simulation and synthesis tool used for designing and testing digital circuits in Verilog) and GTKWave (A waveform viewer that allows for the visualization of simulation outputs, facilitating the analysis of digital signals). The commands for simulating our verilog code and generating the waveform are given below:
 ```
@@ -81,5 +25,11 @@ The simulation has been done using Icarus Verilog (A simulation and synthesis to
 ~ ./test_v //to open the dump file for generating waveform
 ~ gtkwave
 ```
-![compilation](/week1/Task2/Addition/verilog_compilation.png)
+![compilation](/week1/Task2/ALU/ALU_tb.png)
+![waveform](/week1/Task2/ALU/waveform.png)
+
+RISC-V assembly code has been generated for our C code using Godbolt (https://godbolt.org/)
+![Assembly_SS](week1/Task2/ALU/ALU_godbolt.png)
+The full assembly code can be found here: ![Assembly](week1/Task2/ALU/ALU.s)
+
 
