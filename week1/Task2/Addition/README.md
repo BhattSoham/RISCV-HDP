@@ -88,4 +88,4 @@ The simulation has been done using Icarus Verilog (A simulation and synthesis to
 
 Also, the RISC-V assembly code for generating the addition using C code using [https://godbolt.org/] is given below:
 ![Assembly](/week1/Task2/Addition/add_godbolt.png)
-The full assembly code can be found here: ![Assembly](week1/Task2/Addition/add.s)
+The full assembly code can be found here: ![Assembly](/week1/Task2/Addition/add.s)
