@@ -1,4 +1,4 @@
-# Addition using C and Verilog HDL #
+# ADDITION USING C AND VERILOG HDL #
 
 We all know how to add. This is the directory for adding two numbers using C and Verilog HDL.
 
