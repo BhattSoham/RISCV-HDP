@@ -1,4 +1,8 @@
-### Addition using C Code ###
+# Addition using C and Verilog #
+
+We all know how to add. This is the directory for adding two numbers using C and Verilog.
+
+### C Code ###
 Let's take a simple example of adding up two numbers. The C code for the addition is :
 ```
 #include<stdio.h>
@@ -18,7 +22,7 @@ We can check the code on Linux too using ***cat*** command.
 So, for compiling the C code we have to use the following commands given below:
 ![Compilation](/week1/Task2/Addition/c.png)
 
-### Addition using Verilog Code ###
+### Verilog Code ###
 
 Now, let us take the same example and run it on Verilog code. To run it on Verilog code, open the "Text Editor" on your Linux machine and demonstrate the behavioral module for a 1-bit adder.
 ```
