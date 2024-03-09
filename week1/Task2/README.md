@@ -16,7 +16,7 @@ For 9, it is (00001001)<sub>2</sub>. For -9, it should be (10001001)<sub>2</sub>
 
 So,
 
- 00001010 +11101100 =  (11110110)<sub>2</sub>
+ (00001010)<sub>2</sub> + (11101100)<sub>2</sub> =  (11110110)<sub>2</sub>
         
 1's complement addition of (10-19)<sub>10</sub> is (11110110)<sub>2</sub>.
 
