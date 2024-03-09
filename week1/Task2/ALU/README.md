@@ -29,7 +29,7 @@ The simulation has been done using Icarus Verilog (A simulation and synthesis to
 ![waveform](/week1/Task2/ALU/waveform.png)
 
 RISC-V assembly code has been generated for our C code using Godbolt (https://godbolt.org/)
-![Assembly_SS](week1/Task2/ALU/ALU_godbolt.png)
+![Assembly_SS](/week1/Task2/ALU/ALU_godbolt.png)
 The full assembly code can be found here: ![Assembly](week1/Task2/ALU/ALU.s)
 
 
