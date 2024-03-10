@@ -12,7 +12,7 @@ So, for compiling the C code we have to use the following commands given below:
 
 ### Verilog Code ###
 
-   Now, let us take the same example and run it on Verilog code. To run it on Verilog code, open the "Text Editor" on your Linux machine and demonstrate the behavioral module for a 4-bit ALU. The Verilog code can be found here: ![ALU_verilog](week1/Task2/ALU/ALU.v)
+   Now, let us take the same example and run it on Verilog code. To run it on Verilog code, open the "Text Editor" on your Linux machine and demonstrate the behavioral module for a 4-bit ALU. The Verilog code can be found here: ![ALU_verilog](/week1/Task2/ALU/ALU.v)
 
 To check whether our behavioral is working perfectly, we have to write a testbench for it. The test bench can be found here: ![ALU_test_bench](/week1/Task2/ALU/ALU_tb.v)
 
