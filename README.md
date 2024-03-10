@@ -18,7 +18,7 @@ The weekly course curriculum includes the following:
 ### Week 1: ###
 1. Executing C code for *hello world*, *counters*, and *matrix multiplication* despite Assembly incompatibilities.
 2. Focus on binary arithmetic.
-3. Create an *adder* with C and Verilog code, utilizing Iverilog and gtkwave. Run the same program on Godbolt to create assembly instructions.
-4. Create a 4-bit *arithmetic logic unit (ALU)* with C and Verilog code, utilizing Iverilog and gtkwave. Run the same program on Godbolt to create assembly instructions.
+3. Create an *adder* with C and Verilog code, utilizing **Iverilog** and **gtkwave**. Run the same program on **Godbolt** to create assembly instructions.
+4. Create a 4-bit *arithmetic logic unit (ALU)* with C and Verilog code, utilizing **Iverilog** and **gtkwave**. Run the same program on **Godbolt** to create assembly instructions.
 
 Other weeks will be posted shortly!
