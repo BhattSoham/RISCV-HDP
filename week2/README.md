@@ -60,14 +60,60 @@ Another interface is the HDL language or the Hardware Description language. That
 
 ![image4](/week2/task1/using_rtl.png)
 
-a. Introduction to RISC-V basic keywords:
+**a. Introduction to RISC-V basic keywords:**
 
-Regarding the RISC-V basic keywords, we have to keep in mind 5 things:
- i) Pseudo instruction.
- ii) Base integer instructions (RV64I, RV32I) -> Based on the 32/64 bit data.
- iii) FLoating point extensions (RV64F: Single-precision formats, RV64D: Double-precision formats)
+Regarding the RISC-V basic keywords, we have to keep these things in mind:
+ i) Pseudo Instruction.
+ ii) Base Integer Instructions (RV64I, RV32I) -> Based on the 32/64 bit data.
+ iii) Floating Point Extensions (RV64F: Single-precision formats, RV64D: Double-precision formats)
  iv) Multiply/Division Extension (RV64M)
  v) Application Binary Interface (ABI)
+ vi) Memory Allocation and Stack Pointer
 
- What are Pseudo Instructions: 
+***i) Pseudo Instructions:***
 
+![image5](/week2/task1/Pseudo_instructions.png)
+
+These instructions are move("mv"), load-immediate("li"), and return("ret"); highlighted by yellow in the picture given above.
+
+***ii) Base integer instructions (RV64I, RV32I)***
+
+![image6](/week2/task1/RV64I.png)
+
+These instructions are termed "Base integer instructions". They are associated with integer addition, jump, store, etc. They are highlighted with a red arrow in the previous picture. They are dependent upon 32 or 64 bits of data and that's why, we can choose the right instruction format for RV32I and RV64I respectively.
+
+***iii)  Floating point extensions***
+
+![image7](/week2/task1/RV64F_&_RV64D.png)
+
+They are of two types. One is for single-precision format (RV64F) and the other is for double-precision format (RV64D).
+
+***iv) Multiply/Division Extension (RV64M)***
+
+![image8](/week2/task1/RV64M.png)
+
+These are the instructions used for multiply or division formats for RISC-V architecture.
+
+***v) Application Binary Interface (ABI)***
+
+![image9](/week2/task1/ABI.png)
+
+The keywords presented using yellow color are for the application programmers who can use these registers directly for their RISC-V specification using those interfaces. These are called "Application Binary Interface" or "ABI". Every register is associated with some starting address. 
+
+***vi) Memory allocation and stack pointer***
+
+![image10](/week2/task1/Mem_allocation.png)
+
+In every instruction, some data transfer occurs between memory, stack pointer, and register. This concept is called "Memory allocation and stack pointer".
+
+**b. Labwork for RISC-V software toolchain:**
+
+Let us take a simple C program to add and calculate the sum of numbers 1 to n. So for that, let us write the program on 'text editor' or use the command:
+```
+~ leafpad sum.c
+```
+The code is given below:
+
+
+
+AT first, run the following code using gcc compiler using the following commands:
