@@ -113,7 +113,14 @@ Let us take a simple C program to add and calculate the sum of numbers 1 to n. S
 ~ leafpad sum.c
 ```
 The code is given below:
+```
+~ gcc sum.c
+~./a.out
+```
+We can check the following result using gcc compiler in the below image.
+
+![image11](/week2/task1/using_gcc.png)
 
 
 
-AT first, run the following code using gcc compiler using the following commands:
+
