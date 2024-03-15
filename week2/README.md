@@ -14,8 +14,6 @@ The following are as follows:
   
   b. Labwork for RISC-V software toolchain.
 
-  c. Integer number representation.
-
 **RV Day 2**  
 
 ***2. Introduction to ABI and basic verification flow:***
@@ -139,7 +137,7 @@ Also, to get more optimized instructions,  we can use the following command by i
 ```
 ***SPIKE simulation and debug:***
 
-SPIKE is a functional RISC-V ISA C++ sofware simulator. To see the same output as gcc compiler using the SPIKE simulator, we will use the following command:
+SPIKE is a functional RISC-V ISA C++ sofware simulator. Spike is a debugger too, it can be invoked to debug an assembly code, just like any high-level language debugger. We can add breakpoints in terms of memory addresses reported in the leftmost column of the ASM code. To see the same output as gcc compiler using the SPIKE simulator, we will use the following command:
 ```
 spike pk sum.o
 ```
@@ -153,5 +151,16 @@ Please check the below picture.
 
 ![image14](/week2/task1/sum/debug.png)
 
+Let's imagine we wish to examine the content of the RISCV registers when main() is called. 
+What is the content of register a2 when the main function is called?
+To answer this question, we need to run the debugger. 
 
+Command to invoke the spike debugger: 
+```
+~ spike -d pk sum1ton.o
+~ till pc 0 100b0 
+~ reg 0 a2 
+```
+
+## RV Day 2 ##
 
