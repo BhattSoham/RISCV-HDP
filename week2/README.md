@@ -24,4 +24,6 @@ The following are as follows:
 
   c. Basic verification flow using Iverilog.
 
+The RISC-V GNU Software toolchain can be downloaded from here: [https://github.com/riscv-collab/riscv-gnu-toolchain]  
+
 All the detailed explanations are given in Task1 and Task2 directories.
