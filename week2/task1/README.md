@@ -1,6 +1,6 @@
 # RV DAY 1 #
 
-**Introduction**
+***Introduction***
 
 RISC-V instruction set architecture (ISA) is the language of the computer. So, the question arises how can our C program turn into a hardware representation? 
 
@@ -32,7 +32,7 @@ Another interface is the **HDL language** or the **Hardware Description language
 
 ![image4](/week2/task1/using_rtl.png)
 
-**a. Introduction to RISC-V basic keywords:**
+***a. Introduction to RISC-V basic keywords***
 
 Regarding the RISC-V basic keywords, we have to keep these things in mind:
  i) Pseudo Instruction.
@@ -42,43 +42,43 @@ Regarding the RISC-V basic keywords, we have to keep these things in mind:
  v) Application Binary Interface (ABI)
  vi) Memory Allocation and Stack Pointer
 
-***i) Pseudo Instructions:***
+**i) Pseudo Instructions:**
 
 ![image5](/week2/task1/Pseudo_instructions.png)
 
 These instructions are move("mv"), load-immediate("li"), and return("ret"); highlighted by yellow in the picture given above.
 
-***ii) Base integer instructions (RV64I, RV32I)***
+**ii) Base integer instructions (RV64I, RV32I)**
 
 ![image6](/week2/task1/RV64I.png)
 
 These instructions are termed "Base integer instructions". They are associated with integer addition, jump, store, etc. They are highlighted with a red arrow in the previous picture. They are dependent upon 32 or 64 bits of data and that's why, we can choose the right instruction format for RV32I and RV64I respectively.
 
-***iii)  Floating point extensions***
+**iii)  Floating point extensions**
 
 ![image7](/week2/task1/RV64F_&_RV64D.png)
 
 They are of two types. One is for single-precision format (RV64F) and the other is for double-precision format (RV64D).
 
-***iv) Multiply/Division Extension (RV64M)***
+**iv) Multiply/Division Extension (RV64M)**
 
 ![image8](/week2/task1/RV64M.png)
 
 These are the instructions used for multiply or division formats for RISC-V architecture.
 
-***v) Application Binary Interface (ABI)***
+**v) Application Binary Interface (ABI)**
 
 ![image9](/week2/task1/ABI.png)
 
 The keywords presented using yellow color are for the application programmers who can use these registers directly for their RISC-V specification using those interfaces. These are called "Application Binary Interface" or "ABI". Every register is associated with some starting address. 
 
-***vi) Memory allocation and stack pointer***
+**vi) Memory allocation and stack pointer**
 
 ![image10](/week2/task1/Mem_allocation.png)
 
 In every instruction, some data transfer occurs between memory, stack pointer, and register. This concept is called "Memory allocation and stack pointer".
 
-**b. Labwork for RISC-V software toolchain:**
+***b. Labwork for RISC-V software toolchain***
 
 Let us take a simple C program to add and calculate the sum of numbers 1 to n. So for that, let us write the program on 'text editor' or use the command:
 ```
@@ -109,7 +109,7 @@ Also, to get more optimized instructions,  we can use the following command by i
 ```
 ~ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum.o sum.c
 ```
-***SPIKE simulation and debug:***
+***c. SPIKE simulation and debug***
 
 SPIKE is a functional RISC-V ISA C++ sofware simulator. Spike is a debugger too, it can be invoked to debug an assembly code, just like any high-level language debugger. We can add breakpoints in terms of memory addresses reported in the leftmost column of the ASM code. To see the same output as gcc compiler using the SPIKE simulator, we will use the following command:
 ```
