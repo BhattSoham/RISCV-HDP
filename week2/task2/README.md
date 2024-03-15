@@ -1,9 +1,9 @@
 # RV Day 2 #
 
-**Introduction to ABI**
+***a. Introduction to ABI***
 
-"ABI" or "Application Binary Interface is an interface between two binary program modules in computer software.
-The application programmer can directly access the registers of the RISC-V architecture or the hardware resources via a system call and this way is called the Application Binary Interface (ABI) or System Call Interface.
+**"ABI"** or **"Application Binary Interface"** is an interface between two binary program modules in computer software.
+The application programmer can directly access the registers of the RISC-V architecture or the hardware resources via a system call and this way is called the **"Application Binary Interface (ABI)"** or **"System Call Interface"**.
 
 The below picture is detailed regarding the interfaces used from the application program to the hardware. The RISC-V hardware resources can be accessed by the operating system via User and system ISA. The user or the programmer can also access the hardware resources using System ISA.
 
@@ -33,7 +33,7 @@ But RISC-V belongs to the Little-endian memory addressing system".
 
 ![image20](/week2/task2/doubleword_2.png)
 
-**LOAD INSTRUCTION**
+**i. LOAD INSTRUCTION**
 
 Let's assume there's an array of 3 doublewords, it will start from m[16].
 
@@ -47,7 +47,7 @@ Every instruction in RISC-V is 32 bits, be it a 32-bit register or a 64-bit regi
 
 ![image23](/week2/task2/load_inst_format.png)
 
-**ADD INSTRUCTION**
+**ii. ADD INSTRUCTION**
 
 Another instruction is the "Add" command. To write it, we can present it like this 
 
@@ -57,7 +57,7 @@ Here, the content of x8 and x24 is added and stored to the reg x8. The 32-bit in
 
 ![image25](/week2/task2/add_inst_format.png)
 
-**STORE INSTRUCTION**
+**iii. STORE INSTRUCTION**
 
 Another instruction is the "store" command. Here the contents of the reg will be stored back to the memory. It is important because we have a limited number of registers for RISC-V and we have to store it continuously to the memory as it can store more amount of data.
 
@@ -105,7 +105,7 @@ These are the ABI names through which the programmer accesses the RISC-V CPU cor
 
 ![image35](/week2/task2/ABI_names_2.png)
 
-***2. Labwork using ABI function calls***
+***b. Labwork using ABI function calls***
 
 We will re-write our C program to get the sum from 1 to n using assembly language. 
 
@@ -158,7 +158,7 @@ For disassembling, we use the following command:
 
 If we see the code, it passes the variables a0 and a1 only. And load is assigned to jump and it does the operation.
 
-***3. Basic verification flow using Iverilog.***
+***c. Basic verification flow using Iverilog.***
 
 Till now, we have worked on simulation. Now, we want to verify our code on a small PicoRV32 RISC-V CPU core.
 
