@@ -164,6 +164,10 @@ Till now, we have worked on simulation. Now, we want to verify our code on a sma
 
 ![image40](/week2/task2/C_on_RISCV_CPU.png)
 
-We can generate the hex file using the following commands and the images are given below. 
+We can generate the hex file and display the result using the following commands and the images are given below. 
 
-![image41](/week2/task2/hex_file.png)
+![image41](/week2/task2/hex_gen_commands.png)
+
+![image42](/week2/task2/hex_file.png)
+
+
