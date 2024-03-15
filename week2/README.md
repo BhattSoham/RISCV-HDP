@@ -26,6 +26,6 @@ The following are as follows:
 
 The RISC-V GNU Software toolchain can be downloaded from here: [https://github.com/riscv-collab/riscv-gnu-toolchain] 
 
-All the instructions used for RISC-V architecture can be accessed by [week2/RISCVGreenCardv8-20151013.pdf] and [week2/riscv-card.pdf]
+All the instructions used for RISC-V architecture can be accessed by Green cards provided above.
 
-All the detailed explanations are given in Task1 and Task2 directories.
+All other detailed explanations are given in Task1 and Task2 directories, related to RV Day 1 and Day 2 respectively.
