@@ -1,5 +1,7 @@
 # RV DAY 1 #
 
+This section is based on RISC-V ISA and it's associated works.
+
 ***Introduction***
 
 RISC-V instruction set architecture (ISA) is the language of the computer. So, the question arises how can our C program turn into a hardware representation? 
