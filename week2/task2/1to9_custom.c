@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-extern int load(int x, int y)
+extern int load(int x, int y);
 
 int main() {
       int result = 0, count = 9;
