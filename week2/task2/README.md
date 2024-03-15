@@ -1,5 +1,7 @@
 # RV Day 2 #
 
+This section details the ABI and associated works.
+
 ***a. Introduction to ABI***
 
 **"ABI"** or **"Application Binary Interface"** is an interface between two binary program modules in computer software.
