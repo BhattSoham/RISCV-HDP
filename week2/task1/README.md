@@ -1,6 +1,6 @@
 # RV DAY 1 #
 
-This section is based on RISC-V ISA and it's associated works.
+This section is based on RISC-V ISA and its associated works.
 
 ***Introduction***
 
