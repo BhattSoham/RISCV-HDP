@@ -119,8 +119,39 @@ The code is given below:
 ```
 We can check the following result using gcc compiler in the below image.
 
-![image11](/week2/task1/using_gcc.png)
+![image11](/week2/task1/sum/using_gcc.png)
 
+Now, in the RISCV64 software toolchain, we can compile our code using the following commands: 
+```
+~ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum.o sum.c
+```
+To see the assembly instructions used for our code, we will use this command:
+```
+~ riscv64-unknown-elf-objdump -d sum.o | less
+```
+![image12](/week2/task1/sum/main.png)
+
+Here, we can see the base address of our main function is 0000000000010184. If we subtract it from 00000000000101b0 and divide it by 4 (as byte instructions always increment by 4), we will get our number of instructions used, which is 11. 
+
+Also, to get more optimized instructions,  we can use the following command by interchanging "O1" with "Ofast".
+```
+~ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum.o sum.c
+```
+***SPIKE simulation and debug:***
+
+SPIKE is a functional RISC-V ISA C++ sofware simulator. To see the same output as gcc compiler using the SPIKE simulator, we will use the following command:
+```
+spike pk sum.o
+```
+![image13](/week2/task1/sum/using_spike.png)
+
+For debugging, we will use the following command:
+```
+spike -d pk sum.o
+```
+Please check the below picture.
+
+![image14](/week2/task1/sum/debug.png)
 
 
 
