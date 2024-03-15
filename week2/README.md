@@ -269,6 +269,67 @@ These are the ABI names through which the programmer accesses the RISC-V CPU cor
 
 ![image35](/week2/task2/ABI_names_2.png)
 
+***2. Labwork using ABI function calls***
 
+We will re-write our C program to get the sum from 1 to n using assembly language. 
 
+![image36](/week2/task2/Sum_using_ASM.png)
 
+The algorithm which will be used for writing the assembly language is given below.
+
+![image37](/week2/task2/Algo_ASM.png)
+
+We will write a small C code again to sum 1 to n using a customized version. 
+```
+#include<stdio.h> // standard library
+
+extern int load(int x, int y) // load is an external function with two arguments x and y and which will return integer
+
+int main() {
+      int result = 0, count = 9; // initializing result as 0 and count as 9
+      result = load(0x0, count+1); // this shows load has two arguments with 0x0 which is 0 in decimal, and count + 1 is 9+1 = 10, so the load is called with two values 0 and 10 and it is assigned to result
+      printf("Sum of numbers from 1 to %d is %d\n", result, count); // printing the sum
+
+}
+```
+For the assembly, it is given below for the previous algorithm.
+```
+.section .text // Part of the text section, which typically contains executable instructions.
+.global load // Load as global, meaning it can be accessed from other parts of the program
+.type load, @function // Load as a function type
+
+load: add a4, a0, zero // Initialize sum reg a4 as 0x0
+      add a3, a0, zero // Initialize intermediate reg a3 by 0
+      add a2, a0, a1 // adding a0 (0) and a1(10) and storing 10 to a2
+loop: add a4, a3, a4 // a4 = a3 + a4
+      add a3, a3, 1 // a3 = a3 + 1
+      blt a3, a2, loop // if a3 < a2, returns to the branch label : loop section
+      add a0, a4, zero // otherwise, store final result to a0 so that it can be read by the main program
+      ret // return a0
+```
+For the result, if our code is right, we run it using the RISC-V compiler using the below commands:
+```
+~ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o 1to9_custom.o 1to9_custom.c load.S
+~ spike pk 1to9_custom.o
+```
+![image38](/week2/task2/riscv_1to9_custom.png)
+
+For disassembling, we use the following command:
+```
+~ riscv64-unknown-elf-objdump -d 1to9_custom.o | less
+```
+![image39](/week2/task2/Disassembling.png)
+
+If we see the code, it passes the variables a0 and a1 only. And load is assigned to jump and it does the operation.
+
+***3. Basic verification flow using Iverilog.***
+
+Till now, we have worked on simulation. Now, we want to verify our code on a small PicoRV32 RISC-V CPU core.
+
+![image40](/week2/task2/C_on_RISCV_CPU.png)
+
+We can generate the hex file using the following commands and the images are given below. 
+
+![image41](/week2/task2/hex_file.png)
+
+![image42](/week2/task2/hex_gen_commands.png)
