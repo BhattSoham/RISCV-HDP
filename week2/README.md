@@ -14,6 +14,8 @@ The following are as follows:
   
   b. Labwork for RISC-V software toolchain.
 
+  c. Spike Simulation and Debug.
+
 **RV Day 2**  
 
 ***2. Introduction to ABI and basic verification flow:***
