@@ -91,7 +91,7 @@ Now our previous question was why it is only 32 registers for the RISC-V archite
 
 ![image32](/week2/task2/why_32_reg.png)
 
-The naming convention for the RISC-V registers is 0 to 31. Why? Given in the below figure. For this reason, it is [x0 to x(2<sup>5</sup> - 1)] or [x0 to x31.]
+The naming convention for the RISC-V registers is 0 to 31. Why? Given in the below figure. For this reason, it is [x0 to x(2<sup>5</sup> - 1)] or [x0 to x31].
 
 ![image32](/week2/task2/patterns.png)
 
@@ -160,7 +160,7 @@ For disassembling, we use the following command:
 
 If we see the code, it passes the variables a0 and a1 only. And load is assigned to jump and it does the operation.
 
-***c. Basic verification flow using Iverilog.***
+***c. Basic verification flow using Iverilog***
 
 Till now, we have worked on simulation. Now, we want to verify our code on a small PicoRV32 RISC-V CPU core.
 
