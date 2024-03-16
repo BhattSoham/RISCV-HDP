@@ -74,6 +74,6 @@ Therefore, the number of CPU Clock cycles = 20 x 10<sup>9</sup> cycles.
 
 Another example is running the same program on two computers.
 
-![image8](/week2/task3/CPU_performance_comp._new.png)
+![image8](/week2/task3/CPU_performance_comp_new.png)
 
 
