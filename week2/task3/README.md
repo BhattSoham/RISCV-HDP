@@ -76,4 +76,36 @@ Another example is running the same program on two computers.
 
 ![image8](/week2/task3/CPU_performance_comp_new.png)
 
+**CPU Speed Comparison**
 
+For the comparison of the CPU speed, let's take an assembly program given below. Let's take some assumptions of the clock cycles used for those instructions given beside it.
+```
+slli a1, a1, 2 -> inst. 1(3 clock cycles)
+addi a5, a1, 4 -> inst. 2(2 clock cycles)
+add a5, a0, a5 -> inst. 3(3 clock cycles)
+add a1, a0, a1 -> inst. 4(3 clock cycles)
+lw a3, 0(a5)   -> inst. 5(4 clock cycles)
+lw a4, 0(a1)   -> inst. 6(4 clock cycles)
+sw a3, 0(a1)   -> inst. 7(4 clock cycles)
+sw a4, 0(a5)   -> inst. 8(4 clock cycles)
+ret            -> inst. 9(2 clock cycles)
+```
+***So, what should be the clock cycle per instruction?***
+
+The answer is:
+```
+Clock cycle per instruction (CPI) = Total number of clock cycles / Number of instructions
+```
+So, CPI = (3 + 2 + 3 + 3 + 4 + 4 + 4 + 4 + 2) / 9
+        = 29 / 9 = 3.22.
+        
+To get the number of clock cycles, simply multiply CPI with the number of instructions of a program = 3.22 x 9 = 28.98 = 29 clock cycles.
+        
+Our modified formula to calculate CPU time will be then:
+```
+CPU time = CPI x Number of instructions for a program x Clock cycle time (T)
+                        OR
+CPU time = CPI x Number of instructions for a program / Clock rate (f)
+```
+   
+        
