@@ -2,7 +2,7 @@
 
 Everyone in this era is hungry for the performance of our CPU. However, the performance is generally based on the term "PPA", which is Power, Performance, and Area. To get better performance, we can make the power consumption of our CPU less and less in the case of area. But, there are other cases to be considered for better performance.
 
-**Performance**
+## Performance ##
 
 Let's take an example:
 
@@ -40,7 +40,7 @@ This **"User CPU time"** is the **"CPU Performance"**.
 
 ![image5](/week2/task3/CPU_performance.png)
 
-**CPU Performance**
+## CPU Performance ##
 
 Our computer only knows combinational and sequential logic and operation regarding clock cycles.  There are different terminologies to measure CPU performance.
 
@@ -52,7 +52,7 @@ iii. CPU time.
 
 ![image6](/week2/task3/Terminologies_new.png)
 
-**How to measure CPU performance?**
+## How to measure CPU performance? ##
 
 This can be done using a formula:
 ```
@@ -76,7 +76,7 @@ Another example is running the same program on two computers.
 
 ![image8](/week2/task3/CPU_performance_comp_new.png)
 
-**CPU Speed Comparison**
+## CPU Speed Comparison ##
 
 For the comparison of the CPU speed, let's take an assembly program given below. Let's take some assumptions of the clock cycles used for those instructions given beside it.
 ```
@@ -90,7 +90,7 @@ sw a3, 0(a1)   -> inst. 7(4 clock cycles)
 sw a4, 0(a5)   -> inst. 8(4 clock cycles)
 ret            -> inst. 9(2 clock cycles)
 ```
-***So, what should be the clock cycle per instruction?***
+## So, what should be the clock cycle per instruction? ##
 
 The answer is:
 ```
@@ -107,5 +107,42 @@ CPU time = CPI x Number of instructions for a program x Clock cycle time (T)
                         OR
 CPU time = CPI x Number of instructions for a program / Clock rate (f)
 ```
-   
+Now, we will discuss two examples based on the performance differences between two RISC-V CPU cores.
+
+![image9](/week2/task3/CPU_comp.png)
+
+Let's take a look at the next image.
+
+![image10](/week2/task3/CPU_comp_2.png)
+
+Both the CPUs are running the same program, so the number of instructions will be the same.
+
+So,
+```
+CPU_1 / CPU_2 = (2.5 x Inst. Count x 200 ps) / (1.5 x Inst. Count x 400 ps)
+              = 500 ps / 600 ps
+              = 0.833.
+```
+**CPU_1 = 0.833 x CPU_2**
+
+Therefore,
+
+**CPU_2 is 1.2 times faster than CPU_1**
+
+Another example is running three different programs on a single CPU and seeing which code sequence is faster.
+
+![image11](/week2/task3/One_CPU_comp.png)
+
+**The CPI for code sequence 1 is 19 > The CPI for code sequence 2 is 18**
+
+So, 
+
+**Code sequence 2 is faster than code sequence 1**
+
+
+
+
+
+
+
         
