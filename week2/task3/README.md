@@ -139,6 +139,10 @@ So,
 
 **Code sequence 2 is faster than code sequence 1**
 
+This is because CPI is inversely proportional to the CPU performance. The more the CPI, the less the CPU performance, and vice versa.
+
+ 
+
 
 
 
