@@ -50,7 +50,7 @@ ii. Clock rate (1/T) or Clock Frequency (f).
 
 iii. CPU time.
 
-![image6](/week2/task3/Terminologies.png)
+![image6](/week2/task3/Terminologies_new.png)
 
 **How to measure CPU performance?**
 
@@ -62,7 +62,7 @@ CPU time = Number of CPU clock cycles / Clock rate (f)
 ```
 Let's take an example:
 
-![image7](/week2/task3/Ex_CPU_Performance.png)
+![image7](/week2/task3/Ex_CPU_Performance_new.png)
 
 According to the example given above, the clock rate is given as 1GHz. The CPU needs the 20s to execute a program. So, the number of CPU clock cycles will be:
 
@@ -74,6 +74,6 @@ Therefore, the number of CPU Clock cycles = 20 x 10<sup>9</sup> cycles.
 
 Another example is running the same program on two computers.
 
-![image8](/week2/task3/CPU_performance_comp.png)
+![image8](/week2/task3/CPU_performance_comp._new.png)
 
 
