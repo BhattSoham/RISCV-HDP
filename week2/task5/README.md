@@ -8,12 +8,17 @@ ii. Measure the CPU performance of all the abovementioned programs using Godbolt
 
 ## VERIFY ALL THE C CODES (COUNTER, MATRIX MULTIPLICATION, ALU) USING THE RISC-V COMPILER AND SPIKE ISA SIMULATOR ##
 
-We must use these commands to generate the assembly codes and results or verify the codes using the RISC-V compiler and Spike.
+We must use these commands to generate the object file or the machine code and verify the codes using the RISC-V compiler. Also,  command for generating the output results using Spike is given.    
 ```
 ~ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o filename.o filename.c
 ~ riscv64-unknown-elf-objdump -d filename.o | less
 ~ spike pk filename.o
 ```
+Also, to generate an asm file or .S file, we need to use this command.
+```
+riscv64-unknown-elf-gcc -S filename.c -o  filename.S
+```
+
 All the results after verifying and generating using Spike have been given below in the specific parts.
 
 **1. 4-bit Counter**
