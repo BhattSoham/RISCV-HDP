@@ -68,27 +68,12 @@ Let us assume the number of clock cycles for the RISC-V instructions.
 
 For the assembly program for the 4-bit counter by RISC-V Disassembler, let us assume the clock cycles to see the CPU performance below.
 ```
- addi    sp,sp,-48  -> 2 cycles
- sd      s0,32(sp)  -> 3 cycles
- sd      s2,16(sp)  -> 3 cycles
- sd      s3,8(sp)   -> 3 cycles
- sd      ra,40(sp)  -> 3 cycles
- sd      s1,24(sp)  -> 3 cycles
- li      s0,0       -> 3 cycles
- lui     s3,0x21    -> 3 cycles
- li      s2,16      -> 3 cycles
- mv      a1,s0      -> 4 cycles
- addi    a0,s3,816  -> 2 cycles
->
- addiw   s0,s0,1    -> 2 cycles
- jal     ra,104b4 <printf> -> 4 cycles
- bne     s0,s2,100ec <main+0x3c> -> 4 cycles
- li      s0,0       -> 3 cycles
- jal     ra,10228 <clock> -> 4 cycles
- addi    s1,a0,500 -> 2 cycles
- jal     ra,10228 <clock> -> 4 cycles
- bltu    a0,s1,100f4 <main+0x44> -> 4 cycles
- j       100d4 <main+0x24> -> 2 cycles
+addi	sp,sp,-32
+	sd	ra,24(sp)
+	sd	s0,16(sp)
+	addi	s0,sp,32
+	sw	zero,-20(s0)
+  -> 2 cycles
 ```
 Therefore, 
 **Clock cycle per instruction (CPI) = Total number of clock cycles / Number of instructions**
@@ -105,28 +90,19 @@ So, **CPU time = 3.05 x 20 x 200ps = 12,200ps or 12.2ns.**
 
 For the assembly program for the matrix multiplication by RISC-V Disassembler, let us assume the clock cycles to see the CPU performance below.
 ```
-lui     a0,0x21  -> 3 cycles
-addi    sp,sp,-48 -> 2 cycles
-addi    a0,a0,1608 -> 2 cycles
-sd      ra,40(sp) -> 3 cycles
-jal     ra,107d8 <puts> -> 4 cycles
-lui     a5,0x21 -> 3 cycles
-addi    a5,a5,1520 -> 2 cycles
-ld      a2,0(a5) -> 3 cycles
-ld      a3,8(a5) -> 3 cycles
-ld      a4,16(a5) -> 3 cycles
-ld      a5,24(a5) -> 3 cycles
-mv      a0,sp -> 4 cycles
-addi    a1,sp,16 -> 2 cycles
-sd      a2,0(sp) -> 3 cycles
-sd      a3,8(sp) -> 3 cycles
-sd      a4,16(sp) -> 3 cycles
-sd      a5,24(sp) -> 3 cycles
-jal     ra,101dc <mulMat> -> 4 cycles
-ld      ra,40(sp) -> 3 cycles
-li      a0,0 -> 3 cycles
-addi    sp,sp,48 -> 2 cycles
-ret  -> 2 cycles
+addi	sp,sp,-80
+	sd	ra,72(sp)
+	sd	s0,64(sp)
+	addi	s0,sp,80
+	sd	a0,-72(s0)
+	sd	a1,-80(s0)
+	lui	a5,%hi(.LC2)
+	addi	a0,a5,%lo(.LC2)
+	call	puts
+	call	clock
+	sd	a0,-40(s0)
+	sw	zero,-20(s0)
+	j	.L2
 ```
 Therefore, 
 **Clock cycle per instruction (CPI) = Total number of clock cycles / Number of instructions**
