@@ -22,7 +22,7 @@ The weekly course curriculum includes the following:
 4. Create a 4-bit *arithmetic logic unit (ALU)* with C and Verilog code, utilizing **Iverilog** and **gtkwave**. Run the same program on **Godbolt** to create assembly instructions.
 
 ### Week 2: ###
-1. RISC-V MYTH WORKSHOP :
+1. RISCV-based MYTH workshop :
    
     i. Introduction to **RISC-V ISA** and **GNU compiler** toolchain.
    
