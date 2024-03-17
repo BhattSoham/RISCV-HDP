@@ -52,8 +52,11 @@ All the results after verifying and generating have been given below in the spec
 Let us assume the number of clock cycles for the RISC-V instructions.
 
 **Instructions associated with add, mul, div: 2 cycles.**
+
 **Instructions associated with load, store, and move: 3 cycles.**
+
 **Instructions associated with jump, and branch: 4 cycles.**
+
 **All other Instructions: 2 cycles.**
 
 **1. 4-bit Counter**
