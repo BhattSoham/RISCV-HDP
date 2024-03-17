@@ -16,7 +16,7 @@ We must use these commands to generate the object file or the machine code and v
 ```
 Also, to generate an asm file or .S file, we need to use this command.
 ```
-riscv64-unknown-elf-gcc -S filename.c -o  filename.S
+riscv64-unknown-elf-gcc -S filename.c -o filename.S
 ```
 
 All the results after verifying and generating using Spike have been given below in the specific parts.
