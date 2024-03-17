@@ -4,7 +4,7 @@ This section consists of two parts:
 
 i. Verify all the C code (Counter, Matrix multiplication, ALU) using the RISC-V compiler and Spike ISA simulator.
 
-ii. Measure the CPU performance of all the abovementioned programs using Godbolt or RISC-V disassembler.
+ii. Measure the CPU performance of all the abovementioned programs using RISC-V disassembler.
 
 ## VERIFY ALL THE C CODES (COUNTER, MATRIX MULTIPLICATION, ALU) USING THE RISC-V COMPILER AND SPIKE ISA SIMULATOR ##
 
@@ -52,7 +52,7 @@ All the results after verifying and generating using Spike have been given below
 
 ![image9](/week2/task5/spike_output_ALU.png)
 
-## MEASURE THE CPU PERFORMANCE OF ALL THE ABOVEMENTIONED PROGRAMS USING GODBOLT OR RISC-V DISASSEMBLER ##
+## MEASURE THE CPU PERFORMANCE OF ALL THE ABOVEMENTIONED PROGRAMS USING RISC-V DISASSEMBLER ##
 
 Let us assume the number of clock cycles for the RISC-V instructions.
 
@@ -116,7 +116,7 @@ So, **CPU time = 2.6153 x 13 x 200ps = 6800ps or 6.8ns.**
 
 **3. ALU**
 
-For the assembly program for the ALU by Godbolt, let us assume the clock cycles to see the CPU performance below.
+For the assembly program for the ALU by RSC-V Disassembler, let us assume the clock cycles to see the CPU performance below.
 ```
 addi	sp,sp,-32 -> 2 cycles
 sd	ra,24(sp)  -> 3 cycles
