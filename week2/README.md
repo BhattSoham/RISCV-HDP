@@ -2,7 +2,7 @@
 
 This section holds five different directories: Task 1, Task 2, Task 3, Task 4, and Task 5 respectively. In short, the details of the directories is given below.
 
-## RISC-V-based MYTH Workshop ##
+## RISC-V based MYTH Workshop ##
 
 **TASK 1**
 
