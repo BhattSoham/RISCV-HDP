@@ -30,7 +30,7 @@ The weekly course curriculum includes the following:
    
 3. Measurement of CPU performance metrics.
 4. Basic RISC-V Microarchitecture Implementation.
-5. Verify all the previous C codes in Week 1 and Week 2 using **Risc-V compiler** and **Spike ISA simulator**.
-6. CPU performance calculation of the assembly codes with those C programs.
+5. Verify all the previous C codes in Week 1 and Week 2 using **RISC-V compiler** and **SPIKE ISA simulator**.
+6. CPU performance calculation of the assembly codes with those C programs using **RISC-V Disassembler** or **Godbolt**.
    
 **Other weeks will be posted shortly!**
