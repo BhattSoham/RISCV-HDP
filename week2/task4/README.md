@@ -1,6 +1,6 @@
 # Basic RISC-V Microarchitecture Implementation #
 
-RISC-V microarchitecture refers to the internal design and organization of a processor based on the RISC-V instruction set architecture (ISA). We will focus on several steps before making the whole implementation.
+RISC-V microarchitecture refers to the internal design and organization of a processor based on the RISC-V instruction set architecture (ISA). We will discuss some steps before making the whole implementation.
 
 ## Introduction to Program Counter and Instruction Memory ##
 
@@ -40,5 +40,8 @@ If we see these pictures, there are logical and arithmetic operations, where ALU
 
 In the above figure, that [8+sp] is been calculated by the ALU, and the content of the mem[8+sp] address will be sent back to the a2 register through the load instruction.
 
+The whole RISC-V microarchitecture implementation is given below.
+
+![image6](/week2/task4/datapath.png)
 
 
