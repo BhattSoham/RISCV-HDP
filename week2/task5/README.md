@@ -47,42 +47,46 @@ All the results after verifying and generating have been given below in the spec
 
 ![image9](/week2/task5/spike_output_ALU.png)
 
-## MEASURE THE CPU PERFORMANCE OF ALL THE ABOVEMENTIONED PROGRAMS USING GODBOLT OR RISC-V DISASSEMBLER ##
+## MEASURE THE CPU PERFORMANCE OF ALL THE ABOVEMENTIONED PROGRAMS USING RISC-V DISASSEMBLER ##
 
 **4-bit Counter**
 
-For the assembly program for the 4-bit counter, let us see below.
+For the assembly program for the 4-bit counter, let us assume the clock cycles to see the CPU performance below.
 ```
- addi    sp,sp,-48  -> 
- sd      s0,32(sp)  ->
- sd      s2,16(sp)  ->
- sd      s3,8(sp)   ->
- sd      ra,40(sp)  -> 
- sd      s1,24(sp)  ->
- li      s0,0       ->
- lui     s3,0x21    ->
- li      s2,16      ->
- mv      a1,s0      ->
- addi    a0,s3,816  ->
+ addi    sp,sp,-48  -> 2 cycles
+ sd      s0,32(sp)  -> 3 cycles
+ sd      s2,16(sp)  -> 3 cycles
+ sd      s3,8(sp)   -> 3 cycles
+ sd      ra,40(sp)  -> 3 cycles
+ sd      s1,24(sp)  -> 3 cycles
+ li      s0,0       -> 3 cycles
+ lui     s3,0x21    -> 3 cycles
+ li      s2,16      -> 3 cycles
+ mv      a1,s0      -> 4 cycles
+ addi    a0,s3,816  -> 2 cycles
 >
- addiw   s0,s0,1    ->
- jal     ra,104b4 <printf> ->
- bne     s0,s2,100ec <main+0x3c> ->
- li      s0,0       ->
- jal     ra,10228 <clock> ->
- addi    s1,a0,500 ->
- jal     ra,10228 <clock> ->
- bltu    a0,s1,100f4 <main+0x44> ->
- j       100d4 <main+0x24> ->
-
-
-
-
-
-
-
-
+ addiw   s0,s0,1    -> 2 cycles
+ jal     ra,104b4 <printf> -> 4 cycles
+ bne     s0,s2,100ec <main+0x3c> -> 4 cycles
+ li      s0,0       -> 3 cycles
+ jal     ra,10228 <clock> -> 4 cycles
+ addi    s1,a0,500 -> 2 cycles
+ jal     ra,10228 <clock> -> 4 cycles
+ bltu    a0,s1,100f4 <main+0x44> -> 4 cycles
+ j       100d4 <main+0x24> -> 2 cycles
 ```
+Therefore, 
+**Clock cycle per instruction (CPI) = Total number of clock cycles / Number of instructions**
 
+So, CPI will be 61 / 20 = 3.05.
 
+Now, we know, **CPU time = CPI x Number of instructions for a program x Clock cycle time (T)**
+
+Let's assume, T = 200ps.
+
+So, **CPU time = 3.05 x 20 x 200ps = 261ps.**
+
+**Matrix Multiplication**
+
+For the assembly program for the matrix multiplication, let us assume the clock cycles to see the CPU performance below.
 
