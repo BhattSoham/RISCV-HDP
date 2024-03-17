@@ -26,5 +26,5 @@ This section will cover the basic RISC-V Microarchitecture Implementation.
 
 **Task 5**
 
-This section will cover the assignment or task 3 associated with verifying all the previous C codes in Week 1 and Week 2 directories using **RISC-V compiler** and **SPIKE ISA simulator**. This section also covers the the CPU performance calculation of the assembly codes with those C programs, using **RISC-V Disassembler** or **Godbolt**.
+This section will cover the assignment or task 3 associated with verifying all the previous C codes in Week 1 and Week 2 directories using **RISC-V compiler** and **SPIKE ISA simulator**. This section also covers the the CPU performance calculation of the assembly codes with those C programs, using **RISC-V Disassembler**.
 
