@@ -170,3 +170,5 @@ Now, we know, **CPU time = CPI x Number of instructions for a program x Clock cy
 Let's assume, T = 200ps.
 
 So, **CPU time = 2.775 x 40 x 200ps = 22,200ps or 22.2ns.**
+
+**According to the CPU performance, execution time for counter < execution time for Matrix multiplication < execution time for ALU.**
