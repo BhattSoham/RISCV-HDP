@@ -68,52 +68,51 @@ Let us assume the number of clock cycles for the RISC-V instructions.
 
 For the assembly program for the 4-bit counter by RISC-V Disassembler, let us assume the clock cycles to see the CPU performance below.
 ```
-addi	sp,sp,-32
-	sd	ra,24(sp)
-	sd	s0,16(sp)
-	addi	s0,sp,32
-	sw	zero,-20(s0)
-  -> 2 cycles
+addi	sp,sp,-32 -> 2 cycles
+sd	ra,24(sp) -> 3 cycles
+sd	s0,16(sp) -> 3 cycles
+addi	s0,sp,32 -> 2 cycles
+sw	zero,-20(s0) -> 3 cycles 
 ```
 Therefore, 
 **Clock cycle per instruction (CPI) = Total number of clock cycles / Number of instructions**
 
-So, CPI will be 61 / 20 = 3.05.
+So, CPI will be 13 / 5 = 2.6.
 
 Now, we know, **CPU time = CPI x Number of instructions for a program x Clock cycle time (T)**
 
 Let's assume, T = 200ps.
 
-So, **CPU time = 3.05 x 20 x 200ps = 12,200ps or 12.2ns.**
+So, **CPU time = 2.6 x 5 x 200ps = 2600ps or 2.6ns.**
 
 **2. Matrix Multiplication**
 
 For the assembly program for the matrix multiplication by RISC-V Disassembler, let us assume the clock cycles to see the CPU performance below.
 ```
-addi	sp,sp,-80
-	sd	ra,72(sp)
-	sd	s0,64(sp)
-	addi	s0,sp,80
-	sd	a0,-72(s0)
-	sd	a1,-80(s0)
-	lui	a5,%hi(.LC2)
-	addi	a0,a5,%lo(.LC2)
-	call	puts
-	call	clock
-	sd	a0,-40(s0)
-	sw	zero,-20(s0)
-	j	.L2
+addi	sp,sp,-80 -> 2 cycles
+sd	ra,72(sp) -> 3 cycles
+sd	s0,64(sp) -> 3 cycles
+addi	s0,sp,80 -> 2 cycles
+sd	a0,-72(s0) -> 3 cycles
+sd	a1,-80(s0) -> 3 cycles
+lui	a5,%hi(.LC2) -> 3 cycles
+addi	a0,a5,%lo(.LC2) -> 2 cycles
+call	puts -> 2 cycles
+call	clock -> 2 cycles
+sd	a0,-40(s0) -> 3 cycles
+sw	zero,-20(s0) -> 3 cycles
+j	.L2 -> 3 cycles
 ```
 Therefore, 
 **Clock cycle per instruction (CPI) = Total number of clock cycles / Number of instructions**
 
-So, CPI will be 63 / 22 = 2.86.
+So, CPI will be 34 / 13 = 2.6153.
 
 Now, we know, **CPU time = CPI x Number of instructions for a program x Clock cycle time (T)**
 
 Let's assume, T = 200ps.
 
-So, **CPU time = 2.86 x 22 x 200ps = 12,584ps or 12.584ns.**
+So, **CPU time = 2.6153 x 13 x 200ps = 6800ps or 6.8ns.**
 
 **3. ALU**
 
