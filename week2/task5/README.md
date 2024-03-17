@@ -2,11 +2,11 @@
 
 This section consists of two parts:
 
-i. Verify all the C code (Counter, Matrix multiplication, ALU) using the RISC-V compiler and Spike output.
+i. Verify all the C code (Counter, Matrix multiplication, ALU) using the RISC-V compiler and Spike ISA simulator.
 
 ii. Measure the CPU performance of all the abovementioned programs using Godbolt or RISC-V disassembler.
 
-## VERIFY ALL THE C CODES (COUNTER, MATRIX MULTIPLICATION, ALU) USING THE RISC-V COMPILER AND SPIKE OUTPUT ##
+## VERIFY ALL THE C CODES (COUNTER, MATRIX MULTIPLICATION, ALU) USING THE RISC-V COMPILER AND SPIKE ISA SIMULATOR ##
 
 We must use these commands to generate the assembly codes and results or verify the codes using the RISC-V compiler and Spike.
 ```
@@ -14,7 +14,7 @@ We must use these commands to generate the assembly codes and results or verify 
 ~ riscv64-unknown-elf-objdump -d filename.o | less
 ~ spike pk filename.o
 ```
-All the results after verifying and generating have been given below in the specific parts.
+All the results after verifying and generating using Spike have been given below in the specific parts.
 
 **1. 4-bit Counter**
 
