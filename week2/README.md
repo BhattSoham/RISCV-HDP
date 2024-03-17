@@ -1,6 +1,6 @@
 # RISC-V BASED MYTH WORKSHOP, BASIC RISC-V MICROARCHITECTURE IMPLEMENTATION and MEASUREMENT OF THE CPU PERFORMANCE #
 
-This section will hold 5 different directories: Task 1, Task 2, Task 3, Task 4, and Task 5 respectively.
+This section holds five different directories: Task 1, Task 2, Task 3, Task 4, and Task 5 respectively. In short, the details of the directories is given below.
 
 ## RISC-V-based MYTH Workshop ##
 
@@ -26,5 +26,5 @@ This section will cover the basic RISC-V Microarchitecture Implementation.
 
 **Task 5**
 
-This section will cover the assignment or task 3 associated with verifying all the previous C codes in Week 1 and Week 2 directories using Risc-V compiler and Spike output. This section also covers the the CPU performance calculation of the assembly codes with those C programs.
+This section will cover the assignment or task 3 associated with verifying all the previous C codes in Week 1 and Week 2 directories using **RISC-V compiler** and **SPIKE ISA simulator**. This section also covers the the CPU performance calculation of the assembly codes with those C programs, using **RISC-V Disassembler** or **Godbolt**.
 
