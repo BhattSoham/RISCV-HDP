@@ -137,7 +137,7 @@ Another example is running three different programs on a single CPU and seeing w
 
 So, 
 
-**Code sequence 2 is faster than code sequence 1**
+**Code sequence 2 is slower than code sequence 1**
 
 This is because CPI is inversely proportional to the CPU performance. The more the CPI, the less the CPU performance, and vice versa.
 
