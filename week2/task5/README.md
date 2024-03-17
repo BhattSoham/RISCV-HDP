@@ -53,6 +53,28 @@ All the results after verifying and generating have been given below in the spec
 
 For the assembly program for the 4-bit counter, let us see below.
 ```
+ addi    sp,sp,-48  -> 
+ sd      s0,32(sp)  ->
+ sd      s2,16(sp)  ->
+ sd      s3,8(sp)   ->
+ sd      ra,40(sp)  -> 
+ sd      s1,24(sp)  ->
+ li      s0,0       ->
+ lui     s3,0x21    ->
+ li      s2,16      ->
+ mv      a1,s0      ->
+ addi    a0,s3,816  ->
+>
+ addiw   s0,s0,1    ->
+ jal     ra,104b4 <printf> ->
+ bne     s0,s2,100ec <main+0x3c> ->
+ li      s0,0       ->
+ jal     ra,10228 <clock> ->
+ addi    s1,a0,500 ->
+ jal     ra,10228 <clock> ->
+ bltu    a0,s1,100f4 <main+0x44> ->
+ j       100d4 <main+0x24> ->
+
 
 
 
