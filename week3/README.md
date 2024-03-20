@@ -20,6 +20,6 @@ Improving obstacle awareness for people with impairments is critical for increas
 
 ## BLOCK DIAGRAM #
 
-![image1](/week3/block_diagram.png)
+![image1](/week3/Block_Diagram.png)
 
 
