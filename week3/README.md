@@ -8,11 +8,11 @@ The Anti-Theft Compartment project is a comprehensive safety or security solutio
 
 ## KEY COMPONENTS ##
 
-1. SENSOR DETECTOR: The project consists of a sensor, which will detect if there's any unauthorized access happens in the room.
+**1. SENSOR DETECTOR:** The project consists of a sensor, which will detect if there's any unauthorized access happens in the room.
 
-2. RISC-V PROCESSOR: The processor that will handle all the necessary instructions customized for designing this project.
+**2. RISC-V PROCESSOR:** The processor that will handle all the necessary instructions customized for designing this project.
 
-3. BUZZER: The buzzer will help to detect with its controllable 'On' and 'OFF' switches to detect the access.
+**3. BUZZER:** The buzzer will help to detect with its controllable 'On' and 'OFF' switches to detect the access.
 
 ## BLOCK DIAGRAM #
 
