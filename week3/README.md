@@ -15,6 +15,7 @@ The Anti-Theft Compartment project is a comprehensive safety or security solutio
 3. BUZZER: The buzzer will help to detect with its controllable 'On' and 'OFF' switches to detect the access.
 
 ## BLOCK DIAGRAM #
-![image1](block_diagram.png)
+
+![image1](/week3/block_diagram.png)
 
 
