@@ -1,4 +1,4 @@
- OBSTACLE AWARENESS FOR INDIVIDUALS WITH DISABILITIES  #
+# OBSTACLE AWARENESS FOR INDIVIDUALS WITH DISABILITIES  #
 
 This section will provide all the necessary details to focus on building a system to detect obstacles for  disabled individuals.
 
