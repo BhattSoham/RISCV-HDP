@@ -1,10 +1,10 @@
-# OBSTACLE AWARENESS FOR INDIVIDUALS WITH DISABILITIES  #
+ OBSTACLE AWARENESS FOR INDIVIDUALS WITH DISABILITIES  #
 
-This section will provide all the necessary details to focus on building an anti-theft detection system at home.
+This section will provide all the necessary details to focus on building a system to detect obstacles for  disabled individuals.
 
 ## PROJECT OVERVIEW ##
 
-Improving obstacle awareness for people with impairments is critical for increasing their independence and safety when navigating their surroundings. Using an infrared sensor can help identify barriers in real time while delivering information to the user. Integrating these systems into wearable gadgets or mobility aids allows people with impairments to notice and respond to challenges more efficiently, resulting in more freedom and trust in their everyday activities.
+Improving obstacle awareness for people with impairments is critical for increasing their independence and safety when navigating their surroundings. An infrared sensor can help identify barriers in real-time while delivering information to the user. Integrating these systems into wearable gadgets or mobility aids allows people with impairments to notice and respond to challenges more efficiently, resulting in more freedom and trust in their everyday activities.
 
 ## KEY COMPONENTS ##
 
