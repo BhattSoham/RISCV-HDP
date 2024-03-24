@@ -22,7 +22,7 @@ The weekly course curriculum includes the following:
 4. Create a 4-bit *arithmetic logic unit (ALU)* with C and Verilog code, utilizing **Iverilog** and **gtkwave**. Run the same program on **Godbolt** to create assembly instructions.
 
 ### Week 2: ###
-1. RISC-V based MYTH workshop :
+1. **RISC-V based MYTH workshop:**
    
     i. Introduction to **RISC-V ISA** and **GNU compiler** toolchain.
    
@@ -34,7 +34,7 @@ The weekly course curriculum includes the following:
 6. CPU performance calculation of the assembly codes with those C programs using the **RISC-V Disassembler**.
 
 ### Week 3: ###
-**PROJECT : "Obstacle Awareness for Individuals with Disabilities"**
+**PROJECT: "Obstacle Awareness for Individuals with Disabilities"**
 1. An overview of the project.
 2. Key Components for designing the project.
 3. An outline of the project using a block diagram.
