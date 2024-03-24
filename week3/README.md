@@ -98,7 +98,7 @@ riscv64-unknown-elf-objdump -d obstacle_detection.o | less
 
 # OBSTACLE DETECTION WITH INLINE ASSEMBLY #
 
-The inline C code for the obstacle detection is given below.
+The inline assembly code for the obstacle detection is given below.
 ```
 #include<stdio.h>
 #include<stdlib.h>
