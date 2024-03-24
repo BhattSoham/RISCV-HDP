@@ -35,9 +35,9 @@ The weekly course curriculum includes the following:
 
 ### Week 3: ###
 **"Obstacle Awareness for Individuals with Disabilities"**
-1. Project Overview.
+1. An overview of the project.
 2. Key Components for designing the project.
-3. Block Diagram.
+3. An outline of the project using a block diagram.
 4. Basic **C** code compilation using **GCC** compiler and **RISC-V compiler**.
 5. Simulating the code using **SPIKE ISA simulator**.
 6. Assembly code generation for the basic **C** code.
