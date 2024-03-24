@@ -32,5 +32,16 @@ The weekly course curriculum includes the following:
 4. Basic RISC-V Microarchitecture Implementation.
 5. Verify all the previous C codes in Week 1 and Week 2 using **RISC-V compiler** and **SPIKE ISA simulator**.
 6. CPU performance calculation of the assembly codes with those C programs using the **RISC-V Disassembler**.
+
+### Week 3: ###
+**"Obstacle Awareness for Individuals with Disabilities"**
+1. Project Overview.
+2. Key Components for designing the project.
+3. Block Diagram.
+4. Basic **C** code compilation using **GCC** compiler and **RISC-V compiler**.
+5. Simulating the code using **SPIKE ISA simulator**.
+6. Assembly code generation for the basic **C** code.
+7. **Inline assembly code** for the Obstacle detector.
+8. Testing the code with **SPIKE ISA Simulator** and Assembly code generation using **RISC-V objdump** command.
    
 **Other weeks will be posted shortly!**
