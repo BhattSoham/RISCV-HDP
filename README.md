@@ -33,7 +33,7 @@ The weekly course curriculum includes the following:
 5. Verify all the previous C codes in Week 1 and Week 2 using **RISC-V compiler** and **SPIKE ISA simulator**.
 6. CPU performance calculation of the assembly codes with those C programs using the **RISC-V Disassembler**.
 
-### Week 3: ###
+### Week 3 and Week 4: ###
 **PROJECT: "Obstacle Awareness for Individuals with Disabilities"**
 1. An overview of the project.
 2. Key Components for designing the project.
