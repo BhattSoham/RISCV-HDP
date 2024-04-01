@@ -193,8 +193,8 @@ If sensor = 1:
 
 For converting C code into the RISC-V assembly, run the following commands:
 ```
-riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding  -o output assembly.c
-riscv64-unknown-elf-objdump -d  -r out > obstacle_detection_assembly.txt
+riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding  -o output assembly.c
+riscv64-unknown-elf-objdump -d  -r output > obstacle_detection.txt
 ```
 
 ```
