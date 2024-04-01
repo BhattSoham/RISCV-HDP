@@ -177,7 +177,7 @@ return 0;
 ## TESTING ##
 Run the following commands:
 ```
-riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding  -o output assembly.c
+riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding  -o output assembly.c
 spike pk output
 ```
 If sensor = 0:
