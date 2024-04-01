@@ -15,7 +15,7 @@ The weekly course curriculum includes the following:
 1. Set up the computer by installing Oracle Virtual VM Machine via VDI.
 2. Create a GitHub repository so you may share your work with others.
 
-# Check the folder (Week_0) for more details! #
+## Check the folder (Week_0) for more details! ##
 
 ### Week 1: ###
 1. Execute C code for *hello world*, *counters*, and *matrix multiplication* with Assembly differences.
@@ -23,7 +23,7 @@ The weekly course curriculum includes the following:
 3. Create an *adder* with C and Verilog code, utilizing **Iverilog** and **gtkwave**. Run the same program on **Godbolt** to create assembly instructions.
 4. Create a 4-bit *arithmetic logic unit (ALU)* with C and Verilog code, utilizing **Iverilog** and **gtkwave**. Run the same program on **Godbolt** to create assembly instructions.
 
-# Check the folder (Week1) for more details! #
+## Check the folder (Week1) for more details! ##
 
 ### Week 2: ###
 1. **RISC-V based MYTH workshop:**
@@ -37,7 +37,7 @@ The weekly course curriculum includes the following:
 5. Verify all the previous C codes in Week 1 and Week 2 using **RISC-V compiler** and **SPIKE ISA simulator**.
 6. CPU performance calculation of the assembly codes with those C programs using the **RISC-V Disassembler**.
 
-# Check the folder (Week2) for more details!  #
+## Check the folder (Week2) for more details!  ##
 
 ### Week 3 and Week 4: ###
 **PROJECT: "Obstacle Awareness for Individuals with Disabilities"**
@@ -50,6 +50,6 @@ The weekly course curriculum includes the following:
 7. **Inline assembly code** for the Obstacle detector.
 8. Testing the code with **SPIKE ISA Simulator** and Assembly code generation using **RISC-V objdump** command.
 
-# Check the folder (Week3) for more details! #
+## Check the folder (Week3) for more details! ##
 
 **Other weeks will be posted shortly!**
