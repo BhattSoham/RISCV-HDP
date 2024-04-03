@@ -100,11 +100,11 @@ riscv64-unknown-elf-objdump -d obstacle_detection.o | less
 
 The inline assembly code for the obstacle detection is given below.
 ```
-#include<stdio.h>
-#include<stdlib.h>
+/* #include<stdio.h>
+#include<stdlib.h> */
 
 int main () {
-    int sensor = 0;
+    int sensor = 1;
     int buzzer;
     int reset;
     int buzzer_reg;
@@ -130,8 +130,8 @@ while(1) {
     :
     :
      );
-      printf("Resetting all values \n");
-      printf("Output = %d \n", buzzer);
+     /* printf("Resetting all values \n");
+      printf("Output = %d \n", buzzer); */
      }
   else  {
    if (sensor) {
@@ -144,9 +144,9 @@ while(1) {
     :"r"(buzzer_reg), "r"(mask)
     :"x30"
      );
-     printf("Object detected \n");
+    /* printf("Object detected \n");
      printf("Output = %d \n", buzzer);
-     printf("Sensor = %d \n", sensor);
+     printf("Sensor = %d \n", sensor); */
      }
 
     else {
@@ -159,9 +159,9 @@ while(1) {
     :"r"(buzzer_reg), "r"(mask)
     :"x30"
      );
-    printf("Object not detected \n");
+  /*  printf("Object not detected \n");
     printf("Output = %d \n", buzzer);
-    printf("Sensor = %d \n", sensor);
+    printf("Sensor = %d \n", sensor); */
     }
   }
  
