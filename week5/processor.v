@@ -6534,8 +6534,8 @@ endmodule
     input clk;
     output reg write_done ; 
     output reg [2:0] instructions ; 
-    input wire [3:0] input_gpio_pins;
-    output reg [3:0] output_gpio_pins;  
+    input wire input_gpio_pins;
+    output reg output_gpio_pins;  
     reg rst;
     reg neg_clk; 
     reg neg_rst; 
@@ -6762,8 +6762,8 @@ endmodule
 
     always @(posedge clk) 
     begin
-    output_pins = {24'b0, top_gpio_pins[7:4],  input_gpio_pins} ; 
-    output_gpio_pins = top_gpio_pins[7:4]; 
+    output_pins = {30'b0, top_gpio_pins[1],  input_gpio_pins} ; 
+    output_gpio_pins = top_gpio_pins[1]; 
     write_done = writing_inst_done ; 
     instructions = write_inst_count[2:0]; 
 
