@@ -193,8 +193,8 @@ If sensor = 1:
 
 For converting C code into the RISC-V assembly, run the following commands:
 ```
-riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding  -o output assembly.c
-riscv64-unknown-elf-objdump -d  -r output > obstacle_detection.txt
+riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding  -o out assembly.c
+riscv64-unknown-elf-objdump -d  -r out > obstacle_detection.txt
 ```
 
 ```
@@ -203,86 +203,49 @@ output:     file format elf64-littleriscv
 
 
 Disassembly of section .text:
-0000000000010184 <main>:
-   10184:	fd010113          	addi	sp,sp,-48
-   10188:	02113423          	sd	ra,40(sp)
-   1018c:	02813023          	sd	s0,32(sp)
-   10190:	03010413          	addi	s0,sp,48
-   10194:	00100793          	li	a5,1
-   10198:	fef42623          	sw	a5,-20(s0)
-   1019c:	ffd00793          	li	a5,-3
-   101a0:	fef42223          	sw	a5,-28(s0)
-   101a4:	fe042783          	lw	a5,-32(s0)
-   101a8:	0017979b          	slliw	a5,a5,0x1
-   101ac:	fcf42e23          	sw	a5,-36(s0)
-   101b0:	fdc42783          	lw	a5,-36(s0)
-   101b4:	fe442703          	lw	a4,-28(s0)
-   101b8:	00ef7f33          	and	t5,t5,a4
-   101bc:	00ff6f33          	or	t5,t5,a5
-   101c0:	fe842783          	lw	a5,-24(s0)
-   101c4:	0007879b          	sext.w	a5,a5
-   101c8:	02078c63          	beqz	a5,10200 <main+0x7c>
-   101cc:	fe042023          	sw	zero,-32(s0)
-   101d0:	fe042623          	sw	zero,-20(s0)
-   101d4:	001f7793          	andi	a5,t5,1
-   101d8:	fef42423          	sw	a5,-24(s0)
-   101dc:	000217b7          	lui	a5,0x21
-   101e0:	29078513          	addi	a0,a5,656 # 21290 <__clzdi2+0x48>
-   101e4:	334000ef          	jal	ra,10518 <printf>
-   101e8:	fe042783          	lw	a5,-32(s0)
-   101ec:	00078593          	mv	a1,a5
-   101f0:	000217b7          	lui	a5,0x21
-   101f4:	2a878513          	addi	a0,a5,680 # 212a8 <__clzdi2+0x60>
-   101f8:	320000ef          	jal	ra,10518 <printf>
-   101fc:	fc5ff06f          	j	101c0 <main+0x3c>
-   10200:	fec42783          	lw	a5,-20(s0)
-   10204:	0007879b          	sext.w	a5,a5
-   10208:	06078063          	beqz	a5,10268 <main+0xe4>
-   1020c:	00100793          	li	a5,1
-   10210:	fef42023          	sw	a5,-32(s0)
-   10214:	fe042783          	lw	a5,-32(s0)
-   10218:	0017979b          	slliw	a5,a5,0x1
-   1021c:	fcf42e23          	sw	a5,-36(s0)
-   10220:	fdc42783          	lw	a5,-36(s0)
-   10224:	fe442703          	lw	a4,-28(s0)
-   10228:	00ef7f33          	and	t5,t5,a4
-   1022c:	00ff6f33          	or	t5,t5,a5
-   10230:	000217b7          	lui	a5,0x21
-   10234:	2b878513          	addi	a0,a5,696 # 212b8 <__clzdi2+0x70>
-   10238:	2e0000ef          	jal	ra,10518 <printf>
-   1023c:	fe042783          	lw	a5,-32(s0)
-   10240:	00078593          	mv	a1,a5
-   10244:	000217b7          	lui	a5,0x21
-   10248:	2a878513          	addi	a0,a5,680 # 212a8 <__clzdi2+0x60>
-   1024c:	2cc000ef          	jal	ra,10518 <printf>
-   10250:	fec42783          	lw	a5,-20(s0)
-   10254:	00078593          	mv	a1,a5
-   10258:	000217b7          	lui	a5,0x21
-   1025c:	2d078513          	addi	a0,a5,720 # 212d0 <__clzdi2+0x88>
-   10260:	2b8000ef          	jal	ra,10518 <printf>
-   10264:	f5dff06f          	j	101c0 <main+0x3c>
-   10268:	fe042023          	sw	zero,-32(s0)
-   1026c:	fe042783          	lw	a5,-32(s0)
-   10270:	0017979b          	slliw	a5,a5,0x1
-   10274:	fcf42e23          	sw	a5,-36(s0)
-   10278:	fdc42783          	lw	a5,-36(s0)
-   1027c:	fe442703          	lw	a4,-28(s0)
-   10280:	00ef7f33          	and	t5,t5,a4
-   10284:	00ff6f33          	or	t5,t5,a5
-   10288:	000217b7          	lui	a5,0x21
-   1028c:	2e078513          	addi	a0,a5,736 # 212e0 <__clzdi2+0x98>
-   10290:	288000ef          	jal	ra,10518 <printf>
-   10294:	fe042783          	lw	a5,-32(s0)
-   10298:	00078593          	mv	a1,a5
-   1029c:	000217b7          	lui	a5,0x21
-   102a0:	2a878513          	addi	a0,a5,680 # 212a8 <__clzdi2+0x60>
-   102a4:	274000ef          	jal	ra,10518 <printf>
-   102a8:	fec42783          	lw	a5,-20(s0)
-   102ac:	00078593          	mv	a1,a5
-   102b0:	000217b7          	lui	a5,0x21
-   102b4:	2d078513          	addi	a0,a5,720 # 212d0 <__clzdi2+0x88>
-   102b8:	260000ef          	jal	ra,10518 <printf>
-   102bc:	f05ff06f          	j	101c0 <main+0x3c>
+00010144 <main>:
+   10144:	fd010113          	addi	sp,sp,-48
+   10148:	02812623          	sw	s0,44(sp)
+   1014c:	03010413          	addi	s0,sp,48
+   10150:	00100793          	li	a5,1
+   10154:	fef42623          	sw	a5,-20(s0)
+   10158:	ffd00793          	li	a5,-3
+   1015c:	fef42223          	sw	a5,-28(s0)
+   10160:	fe042783          	lw	a5,-32(s0)
+   10164:	00179793          	slli	a5,a5,0x1
+   10168:	fcf42e23          	sw	a5,-36(s0)
+   1016c:	fdc42783          	lw	a5,-36(s0)
+   10170:	fe442703          	lw	a4,-28(s0)
+   10174:	00ef7f33          	and	t5,t5,a4
+   10178:	00ff6f33          	or	t5,t5,a5
+   1017c:	fe842783          	lw	a5,-24(s0)
+   10180:	00078c63          	beqz	a5,10198 <main+0x54>
+   10184:	fe042023          	sw	zero,-32(s0)
+   10188:	fe042623          	sw	zero,-20(s0)
+   1018c:	001f7793          	andi	a5,t5,1
+   10190:	fef42423          	sw	a5,-24(s0)
+   10194:	fe9ff06f          	j	1017c <main+0x38>
+   10198:	fec42783          	lw	a5,-20(s0)
+   1019c:	02078663          	beqz	a5,101c8 <main+0x84>
+   101a0:	00100793          	li	a5,1
+   101a4:	fef42023          	sw	a5,-32(s0)
+   101a8:	fe042783          	lw	a5,-32(s0)
+   101ac:	00179793          	slli	a5,a5,0x1
+   101b0:	fcf42e23          	sw	a5,-36(s0)
+   101b4:	fdc42783          	lw	a5,-36(s0)
+   101b8:	fe442703          	lw	a4,-28(s0)
+   101bc:	00ef7f33          	and	t5,t5,a4
+   101c0:	00ff6f33          	or	t5,t5,a5
+   101c4:	fb9ff06f          	j	1017c <main+0x38>
+   101c8:	fe042023          	sw	zero,-32(s0)
+   101cc:	fe042783          	lw	a5,-32(s0)
+   101d0:	00179793          	slli	a5,a5,0x1
+   101d4:	fcf42e23          	sw	a5,-36(s0)
+   101d8:	fdc42783          	lw	a5,-36(s0)
+   101dc:	fe442703          	lw	a4,-28(s0)
+   101e0:	00ef7f33          	and	t5,t5,a4
+   101e4:	00ff6f33          	or	t5,t5,a5
+   101e8:	f95ff06f          	j	1017c <main+0x38>
 ```
 
 
