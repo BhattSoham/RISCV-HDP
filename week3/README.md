@@ -247,7 +247,7 @@ Disassembly of section .text:
    101e4:	00ff6f33          	or	t5,t5,a5
    101e8:	f95ff06f          	j	1017c <main+0x38>
 ```
-Running the script.py file, it will generate the number of instructions used for the assembly.
+Running the /week3/script.py file, it will generate the number of instructions used for the assembly.
 ```
 Number of different instructions: 31
 List of unique instructions:
