@@ -1,15 +1,11 @@
-with open('obstacle_detection.txt', 'r') as file:
-    assembly_code = file.read()
-lines = assembly_code.split('\n')
 unique_instructions = set()
-for line in lines[5:]:
-    line = line.strip()
-    if line and not line.startswith('#'):
-        parts = line.split()
-        if len(parts) >= 3:
-            instruction = parts[2]
-            unique_instructions.add(instruction)
-print(f"Number of different instructions: {len(unique_instructions)}")
-print("List of unique instructions:")
-for instruction in unique_instructions:
-    print(instruction)
+lines = disassembly.split('\n')
+for line in lines:
+    if line.strip():  # Skip empty lines
+        instruction = line.split()[1]  # Get the instruction part
+        unique_instructions.add(instruction)
+
+# Print unique instructions
+print("Unique Instructions:")
+for instr in sorted(unique_instructions):
+    print(instr)
