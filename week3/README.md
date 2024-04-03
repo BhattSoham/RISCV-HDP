@@ -255,38 +255,17 @@ python script.py
 **Output:**
 
 ```
-Number of different instructions: 31
+Number of different instructions: 9
 List of unique instructions:
 and
-bltz
-lbu
-bnez
-bltu
-beqz
 andi
-sub
-blt
-add
-ret
-li
-lw
-jal
-auipc
-addi
-bgeu
-srai
-jr
-jalr
 j
 sw
-ecall
-sll
-mv
+li
+lw
 slli
-bne
-neg
-sb
-beq
+beqz
+or
 or
 ```
 
