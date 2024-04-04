@@ -2,7 +2,7 @@
 
 ### UART BYPASSING ###
 
-For the UART bypassing, we have to modify our test bench Verilog file (testbench.v).
+We must modify our test bench Verilog file (testbench.v) for the UART bypassing.
 
 All the instructions will be commented out for the UART bypassing.
 ```
