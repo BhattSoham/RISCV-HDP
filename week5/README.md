@@ -1,4 +1,4 @@
-# UPDATING THE JSON FILE AND GENERATING THE PROCESSOR FOR OUR SPECIFIC APP USING THE CHIPCRON TOOL #
+# UPDATING THE JSON FILE AND GENERATING THE RTL FOR OUR SPECIFIC APP USING THE CHIPCRON TOOL #
 
 From the **Week3** folder, the Chipcron tool has been used to generate the processor and the testbench after generating the number of unique instructions.
 
