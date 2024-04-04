@@ -55,7 +55,7 @@ The weekly course curriculum includes the following:
 ### Week 5: ###
    1. Updating the .json file and generating the RTL design using the **Chipcron Tool**.
    2. Simulating it with the help of **Iverilog**.
-   3. Waveform generation using **GTKWAVE**.
+   3. Waveform generation using the **GTKWAVE**.
 
 ### Check the folder (week5) for more details! ###
 
