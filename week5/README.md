@@ -9,4 +9,8 @@ To simulate the code for our specific app, run the following commands:
 iverilog -o obstacle_detection_v testbench.v processor.v
 vvp obstacle_detection_v
 ```
+![image1](/week5/iverilog_commands.png)
+![image2](/week5/simulation.png)
 
+After that, we will run the **GTKWAVE** to generate the waveform and check our desired output.
+![image3](/week5/output_gtkwave.png)
