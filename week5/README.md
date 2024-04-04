@@ -4,7 +4,7 @@ From the **Week3** folder, the Chipcron tool has been used to generate the RTL d
 
 The *obstacle_detection.txt* and the *obstacle_detection.json* files have been uploaded and the tool will generate the processor and its corresponding testbench in Verilog.
 
-To simulate the code for our specific app, run the following commands using **Iverilog**:
+To simulate the code for our specific app, run the following commands using **Iverilog** simulator:
 ```
 iverilog -o obstacle_detection_v testbench.v processor.v
 vvp obstacle_detection_v
