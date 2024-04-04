@@ -54,8 +54,9 @@ The weekly course curriculum includes the following:
 
 ### Week 5: ###
    1. Updating the .json file and generating the RTL design using the **Chipcron Tool**.
-   2. Simulating it with the help of **Iverilog**.
-   3. Waveform generation using the **GTKWAVE**.
+   2. GPIO Configuration and Functional Simulation using UART.
+   3. Simulating it with the help of **Iverilog** simulator.
+   4. Waveform generation using the **GTKWAVE**.
 
 ### Check the folder (week5) for more details! ###
 
