@@ -21,7 +21,7 @@ The weekly course curriculum includes the following:
 1. Execute C code for *hello world*, *counters*, and *matrix multiplication* with Assembly differences.
 2. Focus on binary arithmetic.
 3. Create an *adder* with C and Verilog code, utilizing **Iverilog** and **gtkwave**. Run the same program on **Godbolt** to create assembly instructions.
-4. Create a 4-bit *arithmetic logic unit (ALU)* with C and Verilog code, utilizing **Iverilog** and **gtkwave**. Run the same program on **Godbolt** to create assembly instructions.
+4. Create a 4-bit *arithmetic logic unit (ALU)* with C and Verilog code, utilizing **Iverilog** and **GTKWAVE**. Run the same program on **Godbolt** to create assembly instructions.
 
 ### Check the folder (week1) for more details! ###
 
@@ -51,5 +51,12 @@ The weekly course curriculum includes the following:
 8. Testing the code with **SPIKE ISA Simulator** and Assembly code generation using **RISC-V objdump** command.
 
 ### Check the folder (week3) for more details! ###
+
+### Week 5: ###
+   1. Updating the .json file and generating the RTL design using the **Chipcron Tool**.
+   2. Simulating it with the help of **Iverilog**.
+   3. Waveform generation using **GTKWAVE**.
+
+### Check the folder (week5) for more details! ###
 
 **Other weeks will be posted shortly!**
