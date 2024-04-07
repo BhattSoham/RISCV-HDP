@@ -256,7 +256,7 @@ python script.py
 **Output:**
 
 ```
-Number of different instructions: 9
+Number of different instructions: 10
 List of unique instructions:
 and
 andi
@@ -267,7 +267,8 @@ lw
 slli
 beqz
 or
-or
+addi
+
 ```
 
 
