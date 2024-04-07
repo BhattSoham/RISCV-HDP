@@ -25,7 +25,7 @@
         "SB"    :false,
         "SH"    :false,
         "SW"    :true,
-        "ADDI"  :false,
+        "ADDI"  :true,
         "SLTI"  :false,
         "SLTIU" :false,
         "XORI"  :false,
