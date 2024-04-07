@@ -193,59 +193,60 @@ If sensor = 1:
 
 For converting C code into the RISC-V assembly, run the following commands:
 ```
-riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding  -o out assembly.c
+riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -nostdlib  -o out assembly.c
 riscv64-unknown-elf-objdump -d  -r out > obstacle_detection.txt
 ```
 
 ```
 
-output:     file format elf64-littleriscv
+out:     file format elf32-littleriscv
 
 
 Disassembly of section .text:
-00010144 <main>:
-   10144:	fd010113          	addi	sp,sp,-48
-   10148:	02812623          	sw	s0,44(sp)
-   1014c:	03010413          	addi	s0,sp,48
-   10150:	00100793          	li	a5,1
-   10154:	fef42623          	sw	a5,-20(s0)
-   10158:	ffd00793          	li	a5,-3
-   1015c:	fef42223          	sw	a5,-28(s0)
-   10160:	fe042783          	lw	a5,-32(s0)
-   10164:	00179793          	slli	a5,a5,0x1
-   10168:	fcf42e23          	sw	a5,-36(s0)
-   1016c:	fdc42783          	lw	a5,-36(s0)
-   10170:	fe442703          	lw	a4,-28(s0)
-   10174:	00ef7f33          	and	t5,t5,a4
-   10178:	00ff6f33          	or	t5,t5,a5
-   1017c:	fe842783          	lw	a5,-24(s0)
-   10180:	00078c63          	beqz	a5,10198 <main+0x54>
-   10184:	fe042023          	sw	zero,-32(s0)
-   10188:	fe042623          	sw	zero,-20(s0)
-   1018c:	001f7793          	andi	a5,t5,1
-   10190:	fef42423          	sw	a5,-24(s0)
-   10194:	fe9ff06f          	j	1017c <main+0x38>
-   10198:	fec42783          	lw	a5,-20(s0)
-   1019c:	02078663          	beqz	a5,101c8 <main+0x84>
-   101a0:	00100793          	li	a5,1
-   101a4:	fef42023          	sw	a5,-32(s0)
-   101a8:	fe042783          	lw	a5,-32(s0)
-   101ac:	00179793          	slli	a5,a5,0x1
-   101b0:	fcf42e23          	sw	a5,-36(s0)
-   101b4:	fdc42783          	lw	a5,-36(s0)
-   101b8:	fe442703          	lw	a4,-28(s0)
-   101bc:	00ef7f33          	and	t5,t5,a4
-   101c0:	00ff6f33          	or	t5,t5,a5
-   101c4:	fb9ff06f          	j	1017c <main+0x38>
-   101c8:	fe042023          	sw	zero,-32(s0)
-   101cc:	fe042783          	lw	a5,-32(s0)
-   101d0:	00179793          	slli	a5,a5,0x1
-   101d4:	fcf42e23          	sw	a5,-36(s0)
-   101d8:	fdc42783          	lw	a5,-36(s0)
-   101dc:	fe442703          	lw	a4,-28(s0)
-   101e0:	00ef7f33          	and	t5,t5,a4
-   101e4:	00ff6f33          	or	t5,t5,a5
-   101e8:	f95ff06f          	j	1017c <main+0x38>
+
+00010054 <main>:
+   10054:	fd010113          	addi	sp,sp,-48
+   10058:	02812623          	sw	s0,44(sp)
+   1005c:	03010413          	addi	s0,sp,48
+   10060:	00100793          	li	a5,1
+   10064:	fef42623          	sw	a5,-20(s0)
+   10068:	ffd00793          	li	a5,-3
+   1006c:	fef42223          	sw	a5,-28(s0)
+   10070:	fe042783          	lw	a5,-32(s0)
+   10074:	00179793          	slli	a5,a5,0x1
+   10078:	fcf42e23          	sw	a5,-36(s0)
+   1007c:	fdc42783          	lw	a5,-36(s0)
+   10080:	fe442703          	lw	a4,-28(s0)
+   10084:	00ef7f33          	and	t5,t5,a4
+   10088:	00ff6f33          	or	t5,t5,a5
+   1008c:	fe842783          	lw	a5,-24(s0)
+   10090:	00078c63          	beqz	a5,100a8 <main+0x54>
+   10094:	fe042023          	sw	zero,-32(s0)
+   10098:	fe042623          	sw	zero,-20(s0)
+   1009c:	001f7793          	andi	a5,t5,1
+   100a0:	fef42423          	sw	a5,-24(s0)
+   100a4:	fe9ff06f          	j	1008c <main+0x38>
+   100a8:	fec42783          	lw	a5,-20(s0)
+   100ac:	02078663          	beqz	a5,100d8 <main+0x84>
+   100b0:	00100793          	li	a5,1
+   100b4:	fef42023          	sw	a5,-32(s0)
+   100b8:	fe042783          	lw	a5,-32(s0)
+   100bc:	00179793          	slli	a5,a5,0x1
+   100c0:	fcf42e23          	sw	a5,-36(s0)
+   100c4:	fdc42783          	lw	a5,-36(s0)
+   100c8:	fe442703          	lw	a4,-28(s0)
+   100cc:	00ef7f33          	and	t5,t5,a4
+   100d0:	00ff6f33          	or	t5,t5,a5
+   100d4:	fb9ff06f          	j	1008c <main+0x38>
+   100d8:	fe042023          	sw	zero,-32(s0)
+   100dc:	fe042783          	lw	a5,-32(s0)
+   100e0:	00179793          	slli	a5,a5,0x1
+   100e4:	fcf42e23          	sw	a5,-36(s0)
+   100e8:	fdc42783          	lw	a5,-36(s0)
+   100ec:	fe442703          	lw	a4,-28(s0)
+   100f0:	00ef7f33          	and	t5,t5,a4
+   100f4:	00ff6f33          	or	t5,t5,a5
+   100f8:	f95ff06f          	j	1008c <main+0x38>
 ```
 Running the ***script.py*** file will generate the number of instructions used for the assembly. Run the following command on Linux:
 
