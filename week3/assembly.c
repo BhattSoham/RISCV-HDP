@@ -3,8 +3,8 @@
 
 int main () {
     int sensor = 1;
-    int buzzer;
-    int reset;
+    int buzzer = 0;
+    int reset = 0;
     int buzzer_reg;
     int mask = 0xFFFFFFFD;  
     buzzer_reg = buzzer * 2;
