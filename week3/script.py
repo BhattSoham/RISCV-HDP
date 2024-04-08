@@ -9,7 +9,7 @@ for line in lines[5:]:
         if len(parts) >= 3:
             instruction = parts[2]
             unique_instructions.add(instruction)
-print("Number of different instructions:".format (len(unique_instructions)))
+print("Number of different instructions:{}".format (len(unique_instructions)))
 print("List of unique instructions:")
 for instruction in unique_instructions:
     print(instruction)
