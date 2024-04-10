@@ -54,5 +54,75 @@ iverilog -o obstacle2_v testbench.v processor.v
 vvp obstacle2_v -fst
 ```
 ![image1](/week6/uart_bypass.png)
+
+## YOSYS Installation ##
+Installing Yosys: https://github.com/YosysHQ/yosys on the vsdworkshop VM.
+
+-- Install the latest version by entering the following commands in the terminal:
+```
+sudo apt install build-essential clang bison flex libreadline-dev \
+    gawk tcl-dev libffi-dev git graphviz \
+    xdot pkg-config python python3 libftdi-dev \
+    qt5-default python3-dev libboost-all-dev cmake libeigen3-dev
+```
+Clone yosys repository
+```
+git clone https://github.com/YosysHQ/yosys yosys --depth 1
+cd yosys
+git fetch --unshallow
+```
+To build Yosys simply type 'make' in this directory.
+```
+make -j$(nproc)
+sudo make install
+```
+
+## Gate Level Synthesis - GLS ##
+
+-- Comment out the data & instruction memory modules in processor.v and ensure **writing_inst_done=1** for uart verification,
+OR **writing_inst_done=0** to bypass uart for simulation.
+
+-- All required sky130 libs are kept in the current working directory, and proper instantiation name is used for SRAM from sky130 libs.\
+
+Use the following yosys commands to synthesize gate-level netlist
+```
+yosys
+```
+![image2](/week6/yosys.png)
+Make sure to use the latest version of Yosys.
+
+-- Read liberty file to import sky130 cells
+```
+read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib
+```
+-- Read your verilog file and generate RTLIL
+
+```
+read_verilog gpio_syn.v
+```
+-- Synthesis of top module (wrapper)
+```
+synth -top wrapper
+```
+![image3](/week6/synth_top_Wrapper.png)
+-- Mapping yosys standard cell to sky130 lib logic cells
+```
+abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
+```
+-- Mapping sky130 lib flip-flop cells
+```
+dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
+```
+-- Synthesis dumping output
+```
+write_verilog synth_gpio.v
+```
+-- Generating Graphviz representation of design
+```
+show wrapper
+```
+![image4](/week6/synth_Design.png)
+## Gate Level Simulation ##
+
  
 
