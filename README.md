@@ -61,7 +61,7 @@ The weekly course curriculum includes the following:
 ### Check the folder (week5) for more details! ###
 
 ### Week 6: ###
-   1. Bypassing the UART.
+   1. Bypassing the **UART**.
    2. Synthesizing the design using **Yosys** synthesis tool.
    3. Gate-level Simulation.
    4. Waveform generation using the **GTKWAVE**.
