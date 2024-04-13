@@ -29,5 +29,5 @@ vvp obstacle_detection_v -fst
 ![image1](/week5/iverilog_commands.png)
 
 
-After that, we will run the **GTKWAVE** to generate the waveform and check our desired output.
+After that, we will run the **GTKWAVE** to generate the waveform for our RTL functional simulation.
 ![image3](/week5/pre-synthesis_simulation.png)
