@@ -27,7 +27,7 @@ vvp obstacle_detection_v -fst
 ```
 
 ![image1](/week5/iverilog_commands.png)
-![image2](/week5/simulation.png)
+
 
 After that, we will run the **GTKWAVE** to generate the waveform and check our desired output.
-![image3](/week5/presynthesis_simulation.png)
+![image3](/week5/pre-synthesis_simulation.png)
