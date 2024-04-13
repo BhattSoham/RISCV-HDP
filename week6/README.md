@@ -143,7 +143,7 @@ Use the command below to launch the simulation once the modifications have been 
 ```
 iverilog -o output_gls testbench.v synth_processor.v sky130_sram_1kbyte_1rw1r_32x256_8.v sky130_fd_sc_hd.v primitives.v
 ```
-![image5](/week6/gate_level_simulation.png)
+![image5](/week6/gls.png)
 
 We can see some numbers underneath the dut on the left side of the above screenshot, which suggests that we used the synthesized netlist to simulate. Additionally, the behavior of the output matches that of the RTL functional simulation. 
 
