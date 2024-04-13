@@ -14,9 +14,7 @@ Improving obstacle awareness for people with impairments is critical for increas
 
 **3. BUZZER:** The buzzer will help to detect with its controllable 'On' and 'OFF' switches to detect the access.
 
-**4. RESET:** The "Reset" button will be turned on during the operation.
-
-**5. BATTERY:** There will be a battery that the user should charge for the device's operation.
+**4. BATTERY:** There will be a battery that the user should charge for the device's operation.
 
 ## BLOCK DIAGRAM #
 
