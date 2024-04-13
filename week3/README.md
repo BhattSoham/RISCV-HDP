@@ -187,54 +187,49 @@ riscv64-unknown-elf-objdump -d  -r out > obstacle_detection.txt
 
 ```
 
+
 out:     file format elf32-littleriscv
 
 
 Disassembly of section .text:
 
 00010054 <main>:
-   10054:	fd010113          	addi	sp,sp,-48
-   10058:	02812623          	sw	s0,44(sp)
-   1005c:	03010413          	addi	s0,sp,48
-   10060:	00100793          	li	a5,1
-   10064:	fef42623          	sw	a5,-20(s0)
-   10068:	ffd00793          	li	a5,-3
-   1006c:	fef42223          	sw	a5,-28(s0)
-   10070:	fe042783          	lw	a5,-32(s0)
-   10074:	00179793          	slli	a5,a5,0x1
-   10078:	fcf42e23          	sw	a5,-36(s0)
-   1007c:	fdc42783          	lw	a5,-36(s0)
-   10080:	fe442703          	lw	a4,-28(s0)
-   10084:	00ef7f33          	and	t5,t5,a4
-   10088:	00ff6f33          	or	t5,t5,a5
-   1008c:	fe842783          	lw	a5,-24(s0)
-   10090:	00078c63          	beqz	a5,100a8 <main+0x54>
-   10094:	fe042023          	sw	zero,-32(s0)
-   10098:	fe042623          	sw	zero,-20(s0)
-   1009c:	001f7793          	andi	a5,t5,1
-   100a0:	fef42423          	sw	a5,-24(s0)
-   100a4:	fe9ff06f          	j	1008c <main+0x38>
-   100a8:	fec42783          	lw	a5,-20(s0)
-   100ac:	02078663          	beqz	a5,100d8 <main+0x84>
-   100b0:	00100793          	li	a5,1
-   100b4:	fef42023          	sw	a5,-32(s0)
-   100b8:	fe042783          	lw	a5,-32(s0)
-   100bc:	00179793          	slli	a5,a5,0x1
-   100c0:	fcf42e23          	sw	a5,-36(s0)
-   100c4:	fdc42783          	lw	a5,-36(s0)
-   100c8:	fe442703          	lw	a4,-28(s0)
-   100cc:	00ef7f33          	and	t5,t5,a4
-   100d0:	00ff6f33          	or	t5,t5,a5
-   100d4:	fb9ff06f          	j	1008c <main+0x38>
-   100d8:	fe042023          	sw	zero,-32(s0)
-   100dc:	fe042783          	lw	a5,-32(s0)
-   100e0:	00179793          	slli	a5,a5,0x1
-   100e4:	fcf42e23          	sw	a5,-36(s0)
-   100e8:	fdc42783          	lw	a5,-36(s0)
-   100ec:	fe442703          	lw	a4,-28(s0)
-   100f0:	00ef7f33          	and	t5,t5,a4
-   100f4:	00ff6f33          	or	t5,t5,a5
-   100f8:	f95ff06f          	j	1008c <main+0x38>
+   10054:	fe010113          	addi	sp,sp,-32
+   10058:	00812e23          	sw	s0,28(sp)
+   1005c:	02010413          	addi	s0,sp,32
+   10060:	fe042623          	sw	zero,-20(s0)
+   10064:	ffd00793          	li	a5,-3
+   10068:	fef42423          	sw	a5,-24(s0)
+   1006c:	fec42783          	lw	a5,-20(s0)
+   10070:	00179793          	slli	a5,a5,0x1
+   10074:	fef42223          	sw	a5,-28(s0)
+   10078:	fe442783          	lw	a5,-28(s0)
+   1007c:	fe842703          	lw	a4,-24(s0)
+   10080:	00ef7f33          	and	t5,t5,a4
+   10084:	00ff6f33          	or	t5,t5,a5
+   10088:	001f7793          	andi	a5,t5,1
+   1008c:	fef42023          	sw	a5,-32(s0)
+   10090:	fe042783          	lw	a5,-32(s0)
+   10094:	02078663          	beqz	a5,100c0 <main+0x6c>
+   10098:	00100793          	li	a5,1
+   1009c:	fef42623          	sw	a5,-20(s0)
+   100a0:	fec42783          	lw	a5,-20(s0)
+   100a4:	00179793          	slli	a5,a5,0x1
+   100a8:	fef42223          	sw	a5,-28(s0)
+   100ac:	fe442783          	lw	a5,-28(s0)
+   100b0:	fe842703          	lw	a4,-24(s0)
+   100b4:	00ef7f33          	and	t5,t5,a4
+   100b8:	00ff6f33          	or	t5,t5,a5
+   100bc:	fcdff06f          	j	10088 <main+0x34>
+   100c0:	fe042623          	sw	zero,-20(s0)
+   100c4:	fec42783          	lw	a5,-20(s0)
+   100c8:	00179793          	slli	a5,a5,0x1
+   100cc:	fef42223          	sw	a5,-28(s0)
+   100d0:	fe442783          	lw	a5,-28(s0)
+   100d4:	fe842703          	lw	a4,-24(s0)
+   100d8:	00ef7f33          	and	t5,t5,a4
+   100dc:	00ff6f33          	or	t5,t5,a5
+   100e0:	fa9ff06f          	j	10088 <main+0x34>
 ```
 Running the ***script.py*** file will generate the number of instructions used for the assembly. Run the following command on Linux:
 
@@ -244,7 +239,7 @@ python script.py
 **Output:**
 
 ```
-Number of different instructions: 10
+Number of different instructions:10
 List of unique instructions:
 and
 andi
@@ -256,6 +251,7 @@ slli
 beqz
 or
 addi
+
 
 ```
 
