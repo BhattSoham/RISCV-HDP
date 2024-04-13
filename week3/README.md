@@ -104,7 +104,6 @@ The inline assembly code for the obstacle detection is given below.
 int main () {
     int sensor ;
     int buzzer=0 ;
- 
     int buzzer_reg ;
     int mask = 0xFFFFFFFD;  
     buzzer_reg = buzzer * 2;
@@ -135,9 +134,9 @@ asm volatile(
     :"r"(buzzer_reg), "r"(mask)
     :"x30"
      );
- //   printf("Object detected \n");
-   //  printf("Output = %d \n", buzzer);
-    // printf("Sensor = %d \n", sensor); 
+     // printf("Object detected \n");
+    //  printf("Output = %d \n", buzzer);
+    //  printf("Sensor = %d \n", sensor); 
      }
 
     else {
@@ -150,9 +149,9 @@ asm volatile(
     :"r"(buzzer_reg), "r"(mask)
     :"x30"
      );
- //   printf("Object not detected \n");
- //   printf("Output = %d \n", buzzer);
- //   printf("Sensor = %d \n", sensor); 
+    //  printf("Object not detected \n");
+   //   printf("Output = %d \n", buzzer);
+   //   printf("Sensor = %d \n", sensor); 
     }
   }
  
