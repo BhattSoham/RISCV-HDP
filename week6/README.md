@@ -65,7 +65,7 @@ Since the CPU doesn't truly need 2k RAM, the already instantiated SRAM modules a
 
 Using writing_inst_done=1 and writing_inst_done=0, perform synthesis twice. and two netlists, dubbed synth_test.v and synth_processor.v, respectively, are obtained. When **writing_inst_done=1**, it indicates that simulation and verification are carried out using the matching netlist gate level and that the UART is passed to prevent the.vcd file from taking up more than 20 GB.
 
-## YOSYS Installation ##
+### YOSYS Installation ###
 Installing Yosys: https://github.com/YosysHQ/yosys on the vsdworkshop VM.
 
 -- Install the latest version by entering the following commands in the terminal:
