@@ -30,4 +30,4 @@ vvp obstacle_detection_v -fst
 ![image2](/week5/simulation.png)
 
 After that, we will run the **GTKWAVE** to generate the waveform and check our desired output.
-![image3](/week5/waveform.png)
+![image3](/week5/presynthesis_simulation.png)
