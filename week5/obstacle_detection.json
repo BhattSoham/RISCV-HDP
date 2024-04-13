@@ -7,10 +7,10 @@
     "address_size":5,
     "shamt":5,
     "instructions":{
-        "LUI"   :true,  
+        "LUI"   :false,  
         "AUIPC" :false, 
         "JAL"   :true,  
-        "JALR"  :true,
+        "JALR"  :false,
         "BEQ"   :true,
         "BNE"   :false,
         "BLT"   :false,
