@@ -12,8 +12,8 @@
 The weekly course curriculum includes the following:
 
 ### Week 0: ### 
-1. Set up the computer by installing Oracle Virtual VM Machine via VDI.
-2. Create a GitHub repository in case you want to share your work with others.
+1. Set up the computer by installing **Oracle Virtual VM Machine** via VDI.
+2. Create a **GitHub** repository if you want to share your work with others.
 
 ### Check the directory (week_0) for more details! ###
 
