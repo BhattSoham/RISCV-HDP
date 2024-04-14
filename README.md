@@ -15,7 +15,7 @@
 
 ## Course Curriculum: ##
 
-The weekly course curriculum includes the following:
+***The weekly course curriculum includes the following:***
 
 ### Week 0: ### 
 1. Install **Oracle Virtual VM Machine** via **VDI**.
