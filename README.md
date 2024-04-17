@@ -69,7 +69,7 @@
 ### Week 6: ###
    1. Bypassing the **UART**.
    2. **Gate-level synthesis** using the open-source **Yosys** synthesizing tool.
-   3. **Gate-level Simulation**.
+   3. **Gate-level Simulation** using **Skywater 130nm PDK**.
    4. Waveform generation using the **GTKWAVE**.
 
 ### Check the directory (week6) for more details! ###
