@@ -61,7 +61,7 @@
 ### Week 5: ###
    1. Updating the ***.json*** file and generating the **RTL design** using the **Chipcron Tool**.
    2. **GPIO Configuration** and **Functional Simulation** using **UART**.
-   3. Simulating it with the help of **Iverilog** simulator.
+   3. Simulating it with the help of **Icarus Verilog** simulator.
    4. Waveform generation using the **GTKWAVE**.
 
 ### Check the directory (week5) for more details! ###
