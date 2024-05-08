@@ -13,6 +13,10 @@
 
 ***6. Learning testbench strategies and functional simulation techniques.***
 
+This course gave participants a comprehensive grasp of creating RISC-V-based embedded projects, covering everything from application code to Netlist. As part of the course curriculum, I got to use the Chipcron tool offered by RISC-V startup https://chipcron-pvt-ltd.github.io/webpage/, to generate a customized RISC-V core. Furthermore, by simulating application code on the created core, I was able to have hands-on experience and improve my understanding of RISC-V architecture and design techniques.
+
+![image](Certificate_of_Completion.png)
+
 ## Course Curriculum: ##
 
 ***The weekly course curriculum includes the following:***
@@ -74,8 +78,6 @@
 
 ### Check the directory (week6) for more details! ###
 
-This course gave participants a comprehensive grasp of creating RISC-V-based embedded projects, covering everything from application code to Netlist. As part of the course curriculum, I got to use the Chipcron tool offered by RISC-V startup https://chipcron-pvt-ltd.github.io/webpage/, to generate a customized RISC-V core. Furthermore, by simulating application code on the created core, I was able to have hands-on experience and improve my understanding of RISC-V architecture and design techniques.
 
-![image](Certificate_of_Completion.png)
 
 
